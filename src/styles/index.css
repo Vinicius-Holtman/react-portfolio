@@ -1,0 +1,15 @@
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 400 1rem "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialised;
+}
