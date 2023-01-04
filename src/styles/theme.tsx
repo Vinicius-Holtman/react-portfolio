@@ -119,7 +119,7 @@ export const themeSettings = (mode: TokenProps) => {
         fontSize: 16
       },
       h6: {
-        fontFamily: ["Roboto", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","), 
         fontSize: 14
       }
     }
