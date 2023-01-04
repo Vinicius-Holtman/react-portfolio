@@ -20,7 +20,7 @@ export const tokens = (mode: TokenProps) => ({
       100: "#cce7df",
       200: "#99cfbf",
       300: "#66b79f",
-      400: "#339f7f",
+      400: "#00B37E",
       500: "#00875f",
       600: "#006c4c",
       700: "#005139",
@@ -62,16 +62,18 @@ export const themeSettings = (mode: TokenProps) => {
       ...(mode === "dark" ? {
         primary: {
           main: colors.green[700],
-          light: colors.green[200],
-
+          light: colors.green[400],
         }, 
         secondary: {
           main: colors.green[500]
         },
+        white: {
+          main: colors.grey[300]
+        },
         neutral: {
           dark: colors.grey[700],
           main: colors.grey[500],
-          light: colors.grey[100]
+          light: colors.grey[300]
         },
         background: {
           default: colors.grey[900],
@@ -83,6 +85,9 @@ export const themeSettings = (mode: TokenProps) => {
         },
         secondary: {
           main: colors.green[500]
+        },
+        white: {
+          main: colors.grey[300]
         },
         neutral: {
           dark: colors.grey[700],

@@ -1,5 +1,6 @@
 import { Box, CssBaseline, ThemeProvider } from '@mui/material'
 import { Route, Routes } from 'react-router-dom'
+import { Navbar } from './components/Navbar'
 import { Home } from './pages/Home'
 import { ColorModeContext, useMode } from './styles/theme'
 
@@ -11,6 +12,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <Navbar />
           <main className='content'>
             <Routes>
               <Route path="/" element={<Home />} />
