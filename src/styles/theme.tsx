@@ -61,7 +61,7 @@ export const themeSettings = (mode: TokenProps) => {
       mode,
       ...(mode === "dark" ? {
         primary: {
-          main: colors.green[700],
+          main: colors.green[400],
           light: colors.green[400],
         }, 
         secondary: {
