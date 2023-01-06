@@ -5,6 +5,7 @@ import RocketseatIcon from "../../../assets/RocketseatIcon.svg"
 import { tokens } from "../../../styles/theme";
 import ImageHome from "../../../assets/imageHome.svg"
 import ReactIcon from "../../../assets/IconReactBackground.svg"
+import { BoxContainer } from "../../../utils/BoxContainer";
 
 const ReactIconBackground = styled("img")(({ theme }) => {
   return {
@@ -18,15 +19,7 @@ export function HomeSection() {
   const colors = tokens(theme.palette.mode)
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        height: "895px",
-
-        display: "flex",
-        justifyContent: "center"
-      }}
-    >
+    <BoxContainer>
       <ReactIconBackground src={ReactIcon} alt="Background React" />
       <Box sx={{
         width: "1120px",
@@ -108,6 +101,6 @@ export function HomeSection() {
           </Typography>
         </Box>
       </Box>
-    </Box>
+    </BoxContainer>
   )
 }
