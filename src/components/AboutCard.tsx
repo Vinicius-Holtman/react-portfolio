@@ -25,6 +25,5 @@ export function AboutCard({ icon, title, subtitle }: AboutCardProps) {
         <Typography >{subtitle}</Typography>
       </CardContent>
     </Card>
-
   )
 }

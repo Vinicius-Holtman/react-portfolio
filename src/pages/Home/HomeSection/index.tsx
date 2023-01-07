@@ -64,10 +64,10 @@ export function HomeSection() {
               Hello! Welcome, I'm
             </Typography>
             <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-              <Typography fontWeight="bold" variant="h3" color="secondary">
+              <Typography fontWeight="bold" variant="h3" color="primary">
                 Vinicius Holtman
               </Typography>
-              <Typography fontWeight="bold" variant="h6" color="primary">
+              <Typography fontWeight="bold" variant="h6" color="secondary">
                 Fullstack Developer
               </Typography>
             </Box>

@@ -27,7 +27,7 @@ export function AboutMeSection() {
         flexDirection: "column",
         gap: 4,
       }}>
-        <Typography variant="h3" color="primary">
+        <Typography variant="h2" color="primary">
           About Me
         </Typography>
 
