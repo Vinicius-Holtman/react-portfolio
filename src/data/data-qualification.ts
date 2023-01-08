@@ -1,11 +1,11 @@
 export const educations = [
   {
-    name: "Faculdade da Indústria",
+    name: "Faculdade da Indústria [Interrupt]",
     courseName: "Bacharel em Sistema da Informação",
     date: "2022 - 2023"
   },
   {
-    name: "Serviço Nacional de Aprendizagem Industrial",
+    name: "Serviço Nacional de Aprendizagem Industrial [Completed]",
     courseName: "Técnico Desenvolvimento de Sistemas",
     date: "2018 - 2019"
   }
@@ -13,15 +13,10 @@ export const educations = [
 
 export const experiences = [
   {
-    name: "Faculdade da Indústria",
-    courseName: "Bacharel em Sistema da Informação",
-    date: "2022 - 2023"
+    role: "Analista Desenvolvedor Fullstack",
+    company: "MM Tecnologia de Informação LTDA",
+    date: "Out 2021 - Nov 2022"
   },
-  {
-    name: "Serviço Nacional de Aprendizagem Industrial",
-    courseName: "Técnico Desenvolvimento de Sistemas",
-    date: "2018 - 2019"
-  }
 ]
 
 // education = {

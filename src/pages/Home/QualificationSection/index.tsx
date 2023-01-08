@@ -47,7 +47,7 @@ export function QualificationSection() {
             <TabPanel value="1" sx={{ width: "500px" }}>
               <TimelineEducation />
             </TabPanel>
-            <TabPanel value="2">
+            <TabPanel value="2" sx={{ width: "500px" }}>
               <TimelineExperience />
             </TabPanel>
           </TabContext>

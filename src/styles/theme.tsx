@@ -67,9 +67,6 @@ export const themeSettings = (mode: TokenProps) => {
         secondary: {
           main: colors.green[500]
         },
-        white: {
-          main: colors.grey[300]
-        },
         neutral: {
           dark: colors.grey[700],
           main: colors.grey[500],
@@ -85,9 +82,6 @@ export const themeSettings = (mode: TokenProps) => {
         },
         secondary: {
           main: colors.green[500]
-        },
-        white: {
-          main: colors.grey[300]
         },
         neutral: {
           dark: colors.grey[700],
