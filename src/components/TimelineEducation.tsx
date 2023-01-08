@@ -21,7 +21,7 @@ export function TimelineEducation() {
       {educations.map((education) => (
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot />
+            <TimelineDot color='secondary' />
             <TimelineConnector />
           </TimelineSeparator>
 

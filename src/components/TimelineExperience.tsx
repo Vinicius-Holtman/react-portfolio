@@ -22,7 +22,7 @@ export function TimelineExperience() {
       {experiences.map((experience) => (
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot />
+            <TimelineDot color='secondary' />
             <TimelineConnector />
           </TimelineSeparator>
 
