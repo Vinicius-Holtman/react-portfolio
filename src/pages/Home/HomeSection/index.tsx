@@ -1,11 +1,10 @@
 import { Box, ListItem, ListItemButton, ListItemIcon, Typography, Button, styled, useTheme } from "@mui/material";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import RocketseatIcon from "../../../assets/RocketseatIcon.svg"
 import { tokens } from "../../../styles/theme";
 import ImageHome from "../../../assets/imageHome.svg"
-import ReactIcon from "../../../assets/IconReactBackground.svg"
-import { BoxContainer } from "../../../utils/BoxContainer";
+import ReactIcon from "../../../assets/skills/react.svg"
+import { Icon } from "@iconify/react";
+import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 const ReactIconBackground = styled("img")(({ theme }) => {
   return {
@@ -15,11 +14,16 @@ const ReactIconBackground = styled("img")(({ theme }) => {
 })
 
 export function HomeSection() {
-  const theme = useTheme()
-  const colors = tokens(theme.palette.mode)
-
   return (
-    <BoxContainer>
+    <Box sx={{
+      width: "100%",
+      height: "915px",
+    
+      display: "flex",
+      justifyContent: "center",
+    }}>
+      <BackgroundParticle />
+
       <ReactIconBackground src={ReactIcon} alt="Background React" />
       <Box sx={{
         width: "1120px",
@@ -31,14 +35,14 @@ export function HomeSection() {
           <ListItem disablePadding>
             <ListItemButton component="a" href="https://github.com/Vinicius-Holtman">
               <ListItemIcon>
-                <GitHubIcon color="secondary" />
+                <Icon color="#00875f" icon="mdi:github" width={30} height={30}  />
               </ListItemIcon>
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton component="a" href="https://linkedin.com/in/vinicius-holtman-9b014a208">
               <ListItemIcon>
-                <LinkedInIcon color="secondary" />
+                <Icon color="#00875f" icon="mdi:linkedin" width={30} height={30}  />
               </ListItemIcon>
             </ListItemButton>
           </ListItem>
@@ -101,6 +105,6 @@ export function HomeSection() {
           </Typography>
         </Box>
       </Box>
-    </BoxContainer>
+    </Box>
   )
 }

@@ -1,5 +1,6 @@
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, Typography, useTheme } from "@mui/material";
 import { ReactNode } from "react";
+import { tokens } from "../styles/theme";
 
 interface AboutCardProps {
   icon: ReactNode;
@@ -8,9 +9,12 @@ interface AboutCardProps {
 }
 
 export function AboutCard({ icon, title, subtitle }: AboutCardProps) {
+  const theme = useTheme()
+  const colors = tokens(theme.palette.mode)
+
   return (
     <Card sx={{
-      borderRadius: "10px"
+      borderRadius: "10px",
     }}>
       <CardContent sx={{
         display: "flex",
@@ -22,7 +26,7 @@ export function AboutCard({ icon, title, subtitle }: AboutCardProps) {
         {icon}
 
         <Typography color="primary" variant="h6" fontWeight="bold">{title}</Typography>
-        <Typography >{subtitle}</Typography>
+        <Typography color={colors.grey[300]}>{subtitle}</Typography>
       </CardContent>
     </Card>
   )

@@ -1,6 +1,5 @@
 import { Box, Typography, Tab } from "@mui/material";
 import { useState } from "react";
-import { BoxContainer } from "../../../utils/BoxContainer";
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 
@@ -9,6 +8,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { TimelineEducation } from "../../../components/TimelineEducation";
 import { TimelineExperience } from "../../../components/TimelineExperience";
+import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 export function QualificationSection() {
   const [value, setValue] = useState('1');
@@ -18,7 +18,15 @@ export function QualificationSection() {
   };
 
   return (
-    <BoxContainer>
+    <Box sx={{
+      width: "100%",
+      height: "655px",
+
+      display: "flex",
+      justifyContent: "center",
+    }}>
+      <BackgroundParticle height="665px" />
+
       <Box sx={{
         width: "1120px",
         display: "flex",
@@ -54,6 +62,6 @@ export function QualificationSection() {
         </Box>
 
       </Box>
-    </BoxContainer>
+    </Box>
   )
 }

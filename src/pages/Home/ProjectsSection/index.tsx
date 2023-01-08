@@ -1,9 +1,14 @@
 import { Box, Typography, Card, CardContent } from "@mui/material";
-import { BoxContainer } from "../../../utils/BoxContainer";
 
 export function ProjectsSection() {
   return (
-    <BoxContainer>
+    <Box sx={{
+      width: "100%",
+      height: "895px",
+    
+      display: "flex",
+      justifyContent: "center",
+    }}>
       <Box sx={{
         width: "1120px",
         display: "flex",
@@ -27,6 +32,6 @@ export function ProjectsSection() {
           </Card>
         </Box>
       </Box>
-    </BoxContainer>
+    </Box>
   )
 }

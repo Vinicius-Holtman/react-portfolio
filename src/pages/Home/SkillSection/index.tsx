@@ -1,11 +1,19 @@
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
 import { CardSkill } from "../../../components/CardSkill";
 import { tools, frontendSkills, backendSkills } from "../../../data/data-skill";
-import { BoxContainer } from "../../../utils/BoxContainer";
+import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 export function SkillSection() {
   return (
-    <BoxContainer>
+    <Box sx={{
+      width: "100%",
+      height: "895px",
+    
+      display: "flex",
+      justifyContent: "center",
+    }}>
+      <BackgroundParticle />
+
       <Box sx={{
         width: "1120px",
         display: "flex",
@@ -61,6 +69,6 @@ export function SkillSection() {
           </Card>
         </Box>
       </Box>
-    </BoxContainer>
+    </Box>
   )
 }

@@ -1,11 +1,19 @@
 import { Box, Typography, Card, CardContent } from "@mui/material";
-import { BoxContainer } from "../../../utils/BoxContainer";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 export function ContactSection() {
   return (
-    <BoxContainer>
+    <Box sx={{
+      width: "100%",
+      height: "530px",
+    
+      display: "flex",
+      justifyContent: "center",
+    }}>
+      <BackgroundParticle height="530px" />
+
       <Box sx={{
         width: "1120px",
         display: "flex",
@@ -51,6 +59,6 @@ export function ContactSection() {
           </Card>
         </Box>
       </Box>
-    </BoxContainer>
+    </Box>
   )
 }

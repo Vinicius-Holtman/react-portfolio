@@ -1,7 +1,4 @@
-import { DarkMode, LightMode, Mail, Notifications } from "@mui/icons-material";
-import { AppBar, Avatar, Badge, Box, colors, IconButton, InputBase, Menu, MenuItem, styled, Toolbar, Typography, useTheme } from "@mui/material";
-import { useContext, useState } from "react";
-import HoltbookLogo from "../assets/holtbook.png"
+import { AppBar, Box, colors, styled, Toolbar, Typography } from "@mui/material";
 
 const StyledToolbar = styled(Toolbar)({
   maxWidth: "960px",
