@@ -5,132 +5,124 @@ export const frontendSkills = [
   },
   {
     name: "HTML",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-html",
   },
   {
     name: "CSS",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-css",
   },
   {
     name: "MaterialUI",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:material-ui",
   },
   {
     name: "TailwindCSS",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:tailwindcss-icon",
   },
   {
     name: "Bootstrap",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:bootstrap",
   },
   {
     name: "Javascript",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:javascript",
   },
   {
     name: "NextJS",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:nextjs-icon",
   },
   {
     name: "Typescript",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-typescript-official",
   },
   {
     name: "SASS",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-sass",
   },
   {
     name: "Redux",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:redux",
   },
 ]
 
 export const backendSkills = [
   {
     name: "NodeJS",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-node",
   },
   {
     name: "Express",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "simple-icons:express",
   },
   {
     name: "Javascript",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:javascript",
   },
   {
     name: "Typescript",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-typescript-official",
   },
   {
     name: "GraphQL",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-graphql",
   },
   {
     name: "Docker",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-docker",
   },
   {
     name: "Sequelize",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:sequelize",
   },
   {
     name: "TypeORM",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:typeorm",
   },
   {
     name: "KnexJS",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:knex",
   },
   {
     name: "Prisma",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-light-prisma",
   },
   {
     name: "MySQL",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:mysql-icon",
   },
   {
     name: "PostgreSQL",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:postgresql",
   },
 ]
 
 export const tools = [
   {
     name: "Git",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-git",
   },
   {
     name: "VS Code",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:visual-studio-code",
   },
   {
     name: "Insomnia",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:insomnia",
   },
   {
     name: "Postman",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:postman-icon",
   },
   {
     name: "Firebase",
-    icon: "vscode-icons:file-type-reactjs",
-  },
-  {
-    name: "Beekepper",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "vscode-icons:file-type-firebase",
   },
   {
     name: "GitHub",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:github-icon",
   },
   {
     name: "Hyper",
-    icon: "vscode-icons:file-type-reactjs",
-  },
-  {
-    name: "DBeaver",
-    icon: "vscode-icons:file-type-reactjs",
+    icon: "logos:hyper",
   },
 ]
