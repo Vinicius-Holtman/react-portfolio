@@ -12,13 +12,13 @@ export function SkillSection() {
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",
-        gap: 5,
+        gap: 2,
       }}>
         <Typography variant="h2" color="primary">
           Technical Skills
         </Typography>
 
-        <Box display="flex" gap={4} width="80%">
+        <Box display="flex" gap={4} width="80%" mt={3}>
           <Card>
             <CardContent>
               <Typography variant="h4" color="secondary">Tools Developer</Typography>

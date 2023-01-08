@@ -5,6 +5,7 @@ import { HomeSection } from "./HomeSection";
 import { SkillSection } from "./SkillSection";
 import { ProjectsSection } from "./ProjectsSection";
 import { ContactSection } from "./ContactSection";
+import { QualificationSection } from "./QualificationSection";
 
 
 export function Home() {
@@ -12,14 +13,16 @@ export function Home() {
   const colors = tokens(theme.palette.mode)
 
   return (
-    <Box>
-      {/* <HomeSection />
-      <AboutMeSection /> */}
-      <SkillSection />
-      {/* <ProjectsSection /> */}
-      {/* <ContactSection /> */}
+    <>
+      <Box>
+        {/* <HomeSection /> */}
+        {/* <AboutMeSection /> */}
+        {/* <SkillSection /> */}
+        {/* <ProjectsSection /> */}
+        <QualificationSection />
+        {/* <ContactSection /> */}
 
-     
-    </Box>
+      </Box>
+    </>
   )
 }

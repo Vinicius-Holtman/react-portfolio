@@ -8,7 +8,7 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: 400 1rem "Roboto", sans-serif;
+  font: 400 1rem "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   -webkit-font-smoothing: antialised;

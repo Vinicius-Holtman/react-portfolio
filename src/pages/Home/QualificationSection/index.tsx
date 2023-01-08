@@ -1,0 +1,59 @@
+import { Box, Typography, Tab } from "@mui/material";
+import { useState } from "react";
+import { BoxContainer } from "../../../utils/BoxContainer";
+import SchoolIcon from '@mui/icons-material/School';
+import WorkIcon from '@mui/icons-material/Work';
+
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
+import { TimelineEducation } from "../../../components/TimelineEducation";
+import { TimelineExperience } from "../../../components/TimelineExperience";
+
+export function QualificationSection() {
+  const [value, setValue] = useState('1');
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+
+  return (
+    <BoxContainer>
+      <Box sx={{
+        width: "1120px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        gap: 2,
+      }}>
+        <Typography variant="h2" color="primary">
+          Qualification
+        </Typography>
+
+
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          sx={{ width: '100%', typography: 'body1' }}
+        >
+          <TabContext value={value}>
+            <TabList onChange={handleChange} aria-label="lab API tabs example">
+              <Tab icon={<SchoolIcon color="secondary" />} iconPosition="start" label="Education" value="1" />
+              <Tab icon={<WorkIcon color="secondary" />} iconPosition="start" label="Experience" value="2" />
+            </TabList>
+
+            <TabPanel value="1" sx={{ width: "500px" }}>
+              <TimelineEducation />
+            </TabPanel>
+            <TabPanel value="2">
+              <TimelineExperience />
+            </TabPanel>
+          </TabContext>
+        </Box>
+
+      </Box>
+    </BoxContainer>
+  )
+}
