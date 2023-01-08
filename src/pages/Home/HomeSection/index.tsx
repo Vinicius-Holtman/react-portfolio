@@ -47,7 +47,7 @@ export function HomeSection() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="https://linkedin.com/in/vinicius-holtman-9b014a208">
+            <ListItemButton component="a" href="https://app.rocketseat.com.br/me/vinicius-holtman">
               <ListItemIcon>
                 <img src={RocketseatIcon} alt="Rocketseat" width={30} height={30} />
               </ListItemIcon>
