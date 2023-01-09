@@ -1,5 +1,10 @@
 export const educations = [
   {
+    name: "English Rockfeller [Progress]",
+    courseName: "Educação Profissionalizante em Inglês",
+    date: "2022 - 2024"
+  },
+  {
     name: "Faculdade da Indústria [Interrupt]",
     courseName: "Bacharel em Sistema da Informação",
     date: "2022 - 2023"

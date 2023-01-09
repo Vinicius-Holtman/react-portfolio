@@ -22,15 +22,7 @@ export function Home() {
         <QualificationSection />
         <ContactSection />
 
-        {/* <Box sx={{
-          height: "900px",
-          widht: "100%"
-        }}> */}
-        {/* </Box> */}
-
       </Box>
-      {/* <BackgroundParticle />
-      <BackgroundSky /> */}
     </>
   )
 }
