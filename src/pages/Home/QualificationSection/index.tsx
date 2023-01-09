@@ -20,12 +20,12 @@ export function QualificationSection() {
   return (
     <Box sx={{
       width: "100%",
-      height: "775px",
+      height: "765px",
 
       display: "flex",
       justifyContent: "center",
     }}>
-      <BackgroundParticle height="665px" />
+      <BackgroundParticle height="765px" />
 
       <Box sx={{
         width: "1120px",

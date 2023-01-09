@@ -8,12 +8,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import { Icon } from "@iconify/react";
 import SendIcon from '@mui/icons-material/Send';
 import { BackgroundSky } from "../../../lib/BackgroundSky";
+import { Footbar } from "../../../components/Footbar";
 
-const Ambient = styled("img")(({ theme }) => {
-  return {
-    width: "100%"
-  }
-})
 
 export function ContactSection() {
   const theme = useTheme()
@@ -23,13 +19,14 @@ export function ContactSection() {
     <>
       <Box sx={{
         width: "100%",
-        height: "520px",
+        height: "585px",
 
         display: "flex",
         justifyContent: "center",
+        position: "relative"
       }}>
-        <BackgroundParticle height="590px" />
-        <BackgroundSky />
+        <BackgroundParticle height="100%" />
+        <BackgroundSky height="100%" />
 
         <Box sx={{
           width: "1120px",
@@ -85,24 +82,15 @@ export function ContactSection() {
                       maxRows={4}
                     />
 
-                    <Button sx={{ mt: 3 }} startIcon={<SendIcon  />} variant="contained">Send</Button>
+                    <Button sx={{ mt: 3 }} startIcon={<SendIcon />} variant="contained">Send</Button>
                   </Box>
                 </CardContent>
               </Card>
             </Grid>
           </Grid>
-
-
-
-          <Box display="flex" width="100%" justifyContent="space-between" gap={4}>
-
-
-
-
-          </Box>
         </Box>
+        <Footbar />
       </Box>
-      <Ambient src={ambient} />
     </>
   )
 }

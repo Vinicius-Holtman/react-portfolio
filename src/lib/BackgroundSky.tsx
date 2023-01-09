@@ -3,11 +3,15 @@ import Sky from 'react-sky';
 import node from '../assets/skills/node.svg';
 import react from '../assets/skills/react.svg';
 
-export function BackgroundSky() {
+interface BackgroundSkyProps {
+  height?: string
+}
+
+export function BackgroundSky({ height }: BackgroundSkyProps) {
     return (
       <Box sx={{
         position: "absolute",
-        height: "695px",
+        height: height ?? "695px",
         width: "100%",
         zIndex: -1
       }}>

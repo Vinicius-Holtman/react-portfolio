@@ -1,7 +1,6 @@
-import { Box, CssBaseline, ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider } from '@mui/material'
 import { Route, Routes } from 'react-router-dom'
 import { Navbar } from './components/Navbar'
-import { BackgroundParticle } from './lib/BackgroundParticle'
 import { Home } from './pages/Home'
 import { ColorModeContext, useMode } from './styles/theme'
 
