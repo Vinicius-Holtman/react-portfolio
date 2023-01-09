@@ -1,11 +1,12 @@
 import { Box, Typography, Card, CardContent } from "@mui/material";
+import { Carousel } from "../../../components/Carousel";
 
 export function ProjectsSection() {
   return (
     <Box sx={{
       width: "100%",
       height: "895px",
-    
+
       display: "flex",
       justifyContent: "center",
     }}>
@@ -25,11 +26,7 @@ export function ProjectsSection() {
         </Typography>
 
         <Box display="flex" gap={4} width="80%">
-          <Card>
-            <CardContent>
-              <Typography variant="h4" color="secondary">Corrousel</Typography>
-            </CardContent>
-          </Card>
+          <Carousel />
         </Box>
       </Box>
     </Box>

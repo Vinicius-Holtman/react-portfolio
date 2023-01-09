@@ -9,6 +9,7 @@ import { QualificationSection } from "./QualificationSection";
 import ambient from "../../assets/ambient.svg"
 import { BackgroundParticle } from "../../lib/BackgroundParticle";
 import { BackgroundSky } from "../../lib/BackgroundSky";
+import { Carousel } from "../../components/Carousel";
 
 
 export function Home() {
@@ -21,7 +22,6 @@ export function Home() {
         <ProjectsSection />
         <QualificationSection />
         <ContactSection />
-
       </Box>
     </>
   )
