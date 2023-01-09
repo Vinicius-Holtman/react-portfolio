@@ -7,6 +7,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import { Icon } from "@iconify/react";
 import SendIcon from '@mui/icons-material/Send';
+import { BackgroundSky } from "../../../lib/BackgroundSky";
 
 const Ambient = styled("img")(({ theme }) => {
   return {
@@ -28,6 +29,7 @@ export function ContactSection() {
         justifyContent: "center",
       }}>
         <BackgroundParticle height="590px" />
+        <BackgroundSky />
 
         <Box sx={{
           width: "1120px",
@@ -44,7 +46,7 @@ export function ContactSection() {
 
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid item xs={6}>
-              <Typography variant="h4" color={colors.grey[300]}>
+              <Typography variant="h5" color={colors.grey[300]}>
                 Fique a vontade para escolher uma forma de contato 😊. Irei responder o mais breve possivel!
               </Typography>
               <Box display="flex" flexDirection="column" gap={3} mt={4}>

@@ -6,6 +6,7 @@ import { AboutCard } from "../../../components/AboutCard";
 import IconNode from "../../../assets/skills/node.svg"
 import { BackgroundSky } from "../../../lib/BackgroundSky";
 import { tokens } from "../../../styles/theme";
+import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 const NodeIconBackground = styled("img")(({ theme }) => {
   return {
@@ -27,6 +28,7 @@ export function AboutMeSection() {
       justifyContent: "center",
     }}>
       <BackgroundSky />
+      <BackgroundParticle height="695px" />
 
       <NodeIconBackground src={IconNode} alt="Image Background Node" />
 
@@ -63,7 +65,7 @@ export function AboutMeSection() {
 
         <Typography
           fontWeight={400}
-          variant="body1"
+          variant="h6"
           color={colors.grey[300]}
         >
           Programador determinado e ambicioso sempre em busca de novos desafios e conhecimentos.
