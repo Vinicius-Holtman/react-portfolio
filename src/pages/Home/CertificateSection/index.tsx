@@ -1,14 +1,14 @@
-import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
-import { CardSkill } from "../../../components/CardSkill";
-import { tools, frontendSkills, backendSkills } from "../../../data/data-skill";
+import { Box, Typography, Card, CardContent, Grid, Button, CardActions, CardMedia } from "@mui/material";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+import ComoGerenciarEstadodasAplicaçõescomRedux from "../../../assets/certificates/Como_Gerenciar_o_Estado_das_Aplicacoes_com_Redux.png"
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export function CertificateSection() {
   return (
     <Box sx={{
       width: "100%",
       height: "895px",
-    
+
       display: "flex",
       justifyContent: "center",
     }}>
@@ -23,51 +23,36 @@ export function CertificateSection() {
         gap: 2,
       }}>
         <Typography variant="h2" color="primary">
-          Technical Skills
+          Certificate
         </Typography>
 
-        <Box display="flex" gap={4} width="80%" mt={3}>
-          <Card>
-            <CardContent>
-              <Typography variant="h4" color="secondary">Tools Developer</Typography>
-              <Grid container rowSpacing={1} mt="20px">
-                {tools.map((tool) => (
-                  <Grid key={tool.name} item xs={3}>
-                    <CardSkill name={tool.name} icon={tool.icon} />
-                  </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
-        </Box>
 
-        <Box display="flex" gap={4} width="80%">
-          <Card>
-            <CardContent>
-              <Typography variant="h4" color="secondary">Frotend Developer</Typography>
-              <Grid container rowSpacing={1} mt="20px">
-                {frontendSkills.map((skill) => (
-                  <Grid key={skill.name} item xs={6}>
-                    <CardSkill name={skill.name} icon={skill.icon} />
-                  </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent>
-              <Typography variant="h4" color="secondary">Backend Developer</Typography>
-              <Grid container rowSpacing={1} mt="20px">
-                {backendSkills.map((skill) => (
-                  <Grid key={skill.name} item xs={6}>
-                    <CardSkill name={skill.name} icon={skill.icon} />
-                  </Grid>
-                ))}
-              </Grid>
-            </CardContent>
-          </Card>
-        </Box>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardMedia
+            sx={{ height: 140, objectFit: "cover" }}
+            image={ComoGerenciarEstadodasAplicaçõescomRedux}
+            title="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Como Gerenciar o Estado das Aplicações com Redux
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              DIO
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Emitido em jan 2023 - Sem data de expiracao
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Codigo da credencial 4eDDqwe3
+            </Typography>
+          </CardContent>
+          <CardActions disableSpacing>
+            <Button sx={{ ml: 0.90 }} variant="outlined" startIcon={<OpenInNewIcon />}>
+              Exibir Credential
+            </Button>
+          </CardActions>
+        </Card>
       </Box>
     </Box>
   )
