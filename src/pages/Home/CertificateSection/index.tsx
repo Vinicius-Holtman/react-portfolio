@@ -1,9 +1,41 @@
-import { Box, Typography, Card, CardContent, Grid, Button, CardActions, CardMedia, Link, styled } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  Grid,
+  Button,
+  CardActions,
+  CardMedia,
+  Link,
+  Pagination as MuiPagination,
+  Stack
+} from "@mui/material";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { certificates } from "../../../data/data-certificate";
+import { ChangeEvent, useState } from "react";
 
 export function CertificateSection() {
+  const [page, setPage] = useState(1)
+
+  const countPages = () => {
+    const totalCertificates = certificates.length
+    const quantityPage = totalCertificates / 6
+    const roundPage = Math.ceil(quantityPage)
+    return roundPage
+  }
+
+  const handleChangePage = (
+    event: ChangeEvent<unknown>,
+    newPage: number,
+  ) => {
+    setPage(newPage);
+  };
+
+  const countInitalPagination = (page * 6) - 6
+  const certificatePagination = certificates.slice(countInitalPagination, countInitalPagination + 6)
+
   return (
     <Box sx={{
       width: "100%",
@@ -27,7 +59,7 @@ export function CertificateSection() {
         </Typography>
 
         <Grid container spacing={2}>
-          {certificates.map((certificate) => (
+          {certificatePagination.map((certificate) => (
             <Grid item xs={2} sm={4} md={4} key={certificate.credentialCod}>
               <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
@@ -60,6 +92,15 @@ export function CertificateSection() {
             </Grid>
           ))}
         </Grid>
+
+        <Stack spacing={2}>
+          <MuiPagination
+            count={countPages()}
+            color="secondary"
+            onChange={handleChangePage}
+            page={page}
+          />
+        </Stack>
       </Box>
     </Box>
   )

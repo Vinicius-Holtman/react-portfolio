@@ -5,11 +5,13 @@ import ImageHome from "../../../assets/imageHome.svg"
 import ReactIcon from "../../../assets/skills/react.svg"
 import { Icon } from "@iconify/react";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+import zIndex from "@mui/material/styles/zIndex";
 
 const ReactIconBackground = styled("img")(({ theme }) => {
   return {
     position: "absolute",
-    height: "800px"
+    height: "800px",
+    zIndex: -1
   }
 })
 

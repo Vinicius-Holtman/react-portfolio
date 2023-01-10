@@ -11,7 +11,8 @@ import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 const NodeIconBackground = styled("img")(({ theme }) => {
   return {
     position: "absolute",
-    height: "500px"
+    height: "500px",
+    zIndex: -1
   }
 })
 
