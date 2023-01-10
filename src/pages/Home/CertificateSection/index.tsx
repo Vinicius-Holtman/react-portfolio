@@ -1,7 +1,7 @@
-import { Box, Typography, Card, CardContent, Grid, Button, CardActions, CardMedia } from "@mui/material";
+import { Box, Typography, Card, CardContent, Grid, Button, CardActions, CardMedia, Link, styled } from "@mui/material";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-import ComoGerenciarEstadodasAplicaçõescomRedux from "../../../assets/certificates/Como_Gerenciar_o_Estado_das_Aplicacoes_com_Redux.png"
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { certificates } from "../../../data/data-certificate";
 
 export function CertificateSection() {
   return (
@@ -26,33 +26,40 @@ export function CertificateSection() {
           Certificate
         </Typography>
 
-
-        <Card sx={{ maxWidth: 345 }}>
-          <CardMedia
-            sx={{ height: 140, objectFit: "cover" }}
-            image={ComoGerenciarEstadodasAplicaçõescomRedux}
-            title="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Como Gerenciar o Estado das Aplicações com Redux
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              DIO
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Emitido em jan 2023 - Sem data de expiracao
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Codigo da credencial 4eDDqwe3
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <Button sx={{ ml: 0.90 }} variant="outlined" startIcon={<OpenInNewIcon />}>
-              Exibir Credential
-            </Button>
-          </CardActions>
-        </Card>
+        <Grid container spacing={2}>
+          {certificates.map((certificate) => (
+            <Grid item xs={2} sm={4} md={4} key={certificate.credentialCod}>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                  sx={{ height: 140, objectFit: "cover" }}
+                  image={certificate.certificateImage}
+                  title="green iguana"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div" color="primary">
+                    {certificate.certificateName}
+                  </Typography>
+                  <Typography variant="h6" color="secondary">
+                    {certificate.company}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Emitido em {certificate.issueDate} - {certificate.isExpired ? certificate.expiredDate : "Sem data de expiração"}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Codigo da credencial: {certificate.credentialCod}
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                  <Link href={certificate.credentialUrl} underline="hover">
+                    <Button sx={{ ml: 0.90 }} variant="outlined" startIcon={<OpenInNewIcon />}>
+                      Exibir Credential
+                    </Button>
+                  </Link>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Box>
   )

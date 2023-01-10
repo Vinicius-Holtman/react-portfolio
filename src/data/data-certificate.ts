@@ -1,5 +1,5 @@
 import certificate1 from "../assets/certificates/Como_Gerenciar_o_Estado_das_Aplicacoes_com_Redux.png"
-import certificate2 from "../assets/certificates/Trabalhando_com_Componentes_em_Angular.png"
+import certificate2 from "../assets/certificates/Trabalhando_com_Componentes_em_Amgular.png"
 import certificate3 from "../assets/certificates/Configurando_Ambient_de_Desenvolvimento_Java_no_Linux.png"
 import certificate4 from "../assets/certificates/Criando_uma_API_Rest_Documentada_com_SpringWeb_e_Swagger.png"
 import certificate5 from "../assets/certificates/Desenvolvendo_Rest_APIs_com_Python_e_Flask.png"
@@ -23,13 +23,33 @@ import certificate22 from "../assets/certificates/Trabalhando_com_Componentes_em
 
 export const certificates = [
   {
+    certificateName: "NodeJs Ignite Rocketseat",
+    company: "Rocketseat",
+    issueDate: "Nov 2022",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "5a78c6d6-4a6a-4664-a1d2-0af778c6be95",
+    credentialUrl: "https://app.rocketseat.com.br/certificates/5a78c6d6-4a6a-4664-a1d2-0af778c6be95",
+    certificateImage: certificate18
+  },
+  {
+    certificateName: "ReactJs Ignite Rocketseat",
+    company: "Rocketseat",
+    issueDate: "Nov 2022",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "47f82426-13a4-46db-bec3-772c3c043e78",
+    credentialUrl: "https://app.rocketseat.com.br/certificates/47f82426-13a4-46db-bec3-772c3c043e78",
+    certificateImage: certificate21
+  },
+  {
     certificateName: "Como Gerenciar o Estado das Aplicações com Redux",
     company: "DIO",
     issueDate: "Jan 2023",
     isExpired: false,
     expiredDate: null,
     credentialCod: "4E831873",
-    credentialUrl: "www.dio.me/certificate/4E831873",
+    credentialUrl: "https://www.dio.me/certificate/4E831873",
     certificateImage: certificate1
   },
   {
@@ -39,7 +59,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "6433F554",
-    credentialUrl: "www.dio.me/certificate/6433F554",
+    credentialUrl: "https://www.dio.me/certificate/6433F554",
     certificateImage: certificate2
   },
   {
@@ -49,7 +69,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "2358488D",
-    credentialUrl: "www.dio.me/certificate/2358488D",
+    credentialUrl: "https://www.dio.me/certificate/2358488D",
     certificateImage: certificate3
   },
   {
@@ -59,7 +79,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "DCC024E6",
-    credentialUrl: "www.dio.me/certificate/DCC024E6",
+    credentialUrl: "https://www.dio.me/certificate/DCC024E6",
     certificateImage: certificate4
   },
   {
@@ -69,7 +89,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "A691CA6F",
-    credentialUrl: "www.dio.me/certificate/A691CA6F",
+    credentialUrl: "https://www.dio.me/certificate/A691CA6F",
     certificateImage: certificate5
   },
   {
@@ -79,7 +99,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "FDE350BD",
-    credentialUrl: "www.dio.me/certificate/FDE350BD",
+    credentialUrl: "https://www.dio.me/certificate/FDE350BD",
     certificateImage: certificate6
   },
   {
@@ -89,7 +109,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "2B6E7676",
-    credentialUrl: "www.dio.me/certificate/2B6E7676",
+    credentialUrl: "https://www.dio.me/certificate/2B6E7676",
     certificateImage: certificate7
   },
   {
@@ -99,17 +119,17 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "B074DB53",
-    credentialUrl: "www.dio.me/certificate/B074DB53",
+    credentialUrl: "https://www.dio.me/certificate/B074DB53",
     certificateImage: certificate8
   },
   {
     certificateName: "Fundamentos em Gestão de Projetos",
-    company: "DIO",
+    company: "Udemy",
     issueDate: "Jun 2020",
     isExpired: false,
     expiredDate: null,
     credentialCod: "UC-a174d76e-cd15-4474-ac08-5cfa12f0f2df",
-    credentialUrl: "www.udemy.com/certificate/UC-a174d76e-cd15-4474-ac08-5cfa12f0f2df/",
+    credentialUrl: "https://www.udemy.com/certificate/UC-a174d76e-cd15-4474-ac08-5cfa12f0f2df/",
     certificateImage: certificate9
   },
   {
@@ -119,7 +139,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "8BA71B28",
-    credentialUrl: "www.dio.me/certificate/8BA71B28",
+    credentialUrl: "https://www.dio.me/certificate/8BA71B28",
     certificateImage: certificate10
   },
   {
@@ -129,7 +149,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "B550B7BB",
-    credentialUrl: "www.dio.me/certificate/B550B7BB",
+    credentialUrl: "https://www.dio.me/certificate/B550B7BB",
     certificateImage: certificate11
   },
   {
@@ -139,7 +159,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "19014650",
-    credentialUrl: "www.dio.me/certificate/19014650",
+    credentialUrl: "https://www.dio.me/certificate/19014650",
     certificateImage: certificate12
   },
   {
@@ -149,7 +169,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "227C04F3",
-    credentialUrl: "www.dio.me/certificate/227C04F3",
+    credentialUrl: "https://www.dio.me/certificate/227C04F3",
     certificateImage: certificate13
   },
   {
@@ -159,7 +179,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "8B2502C7",
-    credentialUrl: "www.dio.me/certificate/8B2502C7",
+    credentialUrl: "https://www.dio.me/certificate/8B2502C7",
     certificateImage: certificate14
   },
   {
@@ -169,38 +189,28 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "BADAA22F",
-    credentialUrl: "www.dio.me/certificate/BADAA22F",
+    credentialUrl: "https://www.dio.me/certificate/BADAA22F",
     certificateImage: certificate15
   },
   {
     certificateName: "JavaScript e Typescript",
-    company: "DIO",
+    company: "Udemy",
     issueDate: "Dez 2022",
     isExpired: false,
     expiredDate: null,
     credentialCod: "UC-69147753-bc78-4004-8f73-49210d64ecce",
-    credentialUrl: "www.udemy.com/certificate/UC-69147753-bc78-4004-8f73-49210d64ecce/",
+    credentialUrl: "https://www.udemy.com/certificate/UC-69147753-bc78-4004-8f73-49210d64ecce/",
     certificateImage: certificate16
   },
   {
     certificateName: "NestJs com TypeORM, Mongoose, Prisma e Swagger",
-    company: "DIO",
+    company: "Udemy",
     issueDate: "Nov 2022",
     isExpired: false,
     expiredDate: null,
     credentialCod: "UC-3e822e20-f5f3-4db5-a364-edc5750491cc",
-    credentialUrl: "www.udemy.com/certificate/UC-3e822e20-f5f3-4db5-a364-edc5750491cc/",
+    credentialUrl: "https://www.udemy.com/certificate/UC-3e822e20-f5f3-4db5-a364-edc5750491cc/",
     certificateImage: certificate17
-  },
-  {
-    certificateName: "NodeJs Ignite Rocketseat",
-    company: "DIO",
-    issueDate: "Nov 2022",
-    isExpired: false,
-    expiredDate: null,
-    credentialCod: "5a78c6d6-4a6a-4664-a1d2-0af778c6be95",
-    credentialUrl: "app.rocketseat.com.br/certificates/5a78c6d6-4a6a-4664-a1d2-0af778c6be95",
-    certificateImage: certificate18
   },
   {
     certificateName: "Praticando Orientação a Objetos com Java",
@@ -209,7 +219,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "D0BED76C",
-    credentialUrl: "www.dio.me/certificate/D0BED76C",
+    credentialUrl: "https://www.dio.me/certificate/D0BED76C",
     certificateImage: certificate19
   },
   {
@@ -219,18 +229,8 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "CE4AF8D8",
-    credentialUrl: "www.dio.me/certificate/CE4AF8D8",
+    credentialUrl: "https://www.dio.me/certificate/CE4AF8D8",
     certificateImage: certificate20
-  },
-  {
-    certificateName: "ReactJs Ignite Rocketseat",
-    company: "DIO",
-    issueDate: "Nov 2022",
-    isExpired: false,
-    expiredDate: null,
-    credentialCod: "47f82426-13a4-46db-bec3-772c3c043e78",
-    credentialUrl: "app.rocketseat.com.br/certificates/47f82426-13a4-46db-bec3-772c3c043e78",
-    certificateImage: certificate21
   },
   {
     certificateName: "Trabalhando com Componentes em React",
@@ -239,7 +239,7 @@ export const certificates = [
     isExpired: false,
     expiredDate: null,
     credentialCod: "93A36612",
-    credentialUrl: "www.dio.me/certificate/93A36612",
+    credentialUrl: "https://www.dio.me/certificate/93A36612",
     certificateImage: certificate22
   },
 ]
