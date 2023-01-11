@@ -1,7 +1,8 @@
 import { AppBar, Box, colors, styled, Toolbar, Typography } from "@mui/material";
 
 const StyledToolbar = styled(Toolbar)({
-  width: "1120px",
+  width: "100%",
+  maxWidth: "1120px",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center"
@@ -29,10 +30,10 @@ export function Navbar() {
           justifyContent="space-between"
           gap={4}
         >
-          <Typography variant="h4" sx={{ display: { xs: "none", sm: "block" } }}>
+          <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
             Home
           </Typography>
-          <Typography variant="h4" sx={{ display: { xs: "none", sm: "block" } }}>
+          <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
             Projects
           </Typography>
         </Box>

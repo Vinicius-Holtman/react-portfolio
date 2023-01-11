@@ -5,7 +5,6 @@ import { SkillSection } from "./SkillSection";
 import { ProjectsSection } from "./ProjectsSection";
 import { ContactSection } from "./ContactSection";
 import { QualificationSection } from "./QualificationSection";
-import { Footbar } from "../../components/Footbar";
 import { CertificateSection } from "./CertificateSection";
 
 export function Home() {
