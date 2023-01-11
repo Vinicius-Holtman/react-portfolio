@@ -10,7 +10,7 @@ import zIndex from "@mui/material/styles/zIndex";
 const ReactIconBackground = styled("img")(({ theme }) => {
   return {
     position: "absolute",
-    height: "800px",
+    height: "80%",
     zIndex: -1
   }
 })

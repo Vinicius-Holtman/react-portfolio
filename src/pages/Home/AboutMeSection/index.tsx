@@ -11,7 +11,7 @@ import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 const NodeIconBackground = styled("img")(({ theme }) => {
   return {
     position: "absolute",
-    height: "500px",
+    height: "50%",
     zIndex: -1
   }
 })
@@ -33,7 +33,7 @@ export function AboutMeSection() {
 
       <NodeIconBackground src={IconNode} alt="Image Background Node" />
 
-      <Box p="0px 315px" sx={{
+      <Box sx={{
         width: "1120px",
         display: "flex",
         marginTop: "90px",
@@ -68,6 +68,7 @@ export function AboutMeSection() {
           fontWeight={400}
           variant="h6"
           color={colors.grey[300]}
+          maxWidth="500px"
         >
           Programador determinado e ambicioso sempre em busca de novos desafios e conhecimentos.
           Conheci a área de programação em 2018 no curso técnico do SENAI. Minhas primeiras linguagens estudas foram PHP, Javascript e SQL, após estudá-las adquiri apreço por desenvolvimento de aplicações. Possuo conhecimentos e experiência com projetos Full-Stack, meu objetivo dentro da programação é minha capacitação, sempre procurando me desenvolver melhor a cada dia.

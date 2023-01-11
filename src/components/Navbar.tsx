@@ -1,17 +1,21 @@
 import { AppBar, Box, colors, styled, Toolbar, Typography } from "@mui/material";
 
 const StyledToolbar = styled(Toolbar)({
-  maxWidth: "960px",
+  width: "1120px",
   display: "flex",
-  marginLeft: "5rem",
-  justifyContent: "space-between"
+  justifyContent: "space-between",
+  alignItems: "center"
 })
 
 export function Navbar() {
   return (
     <AppBar position="sticky" sx={{
+      width: "100%",
       mb: "10px",
       backgroundColor: colors.grey[800],
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
     }}>
       <StyledToolbar>
         <Box>

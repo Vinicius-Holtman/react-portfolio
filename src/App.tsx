@@ -12,7 +12,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <Navbar />
+          {/* <Navbar /> */}
           <main className='content'>
             <Routes>
               <Route path="/" element={<Home />} />

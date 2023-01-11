@@ -35,7 +35,6 @@ export function ContactSection() {
           justifyContent: "flex-start",
           alignItems: "center",
           gap: 5,
-          p: "0px 200px",
         }}>
           <Typography variant="h2" color="primary">
             Entre em contato
