@@ -40,20 +40,20 @@ export function Navbar() {
           justifyContent="space-between"
           gap={1}
         >
-          <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
-            <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
               <Typography color="secondary" variant="h5">
                 Home
               </Typography>
-            </Link>
-          </Button>
-          <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
-            <Link to="/projects" style={{ textDecoration: "none" }}>
+            </Button>
+          </Link>
+          <Link to="/projects" style={{ textDecoration: "none" }}>
+            <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
               <Typography color="secondary" variant="h5">
                 Projects
               </Typography>
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Box>
       </StyledToolbar>
     </AppBar>
