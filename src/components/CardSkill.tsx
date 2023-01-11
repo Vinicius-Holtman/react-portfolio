@@ -18,7 +18,7 @@ export function CardSkill({ name, icon }: CardSkillProps) {
       alignItems: "center",
       gap: 1,
       padding: "5px 20px 5px 30px",
-      width: 180,
+      flex: 1,
       minHeight: 45,
       backgroundColor: colors.grey[900],
       boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"

@@ -11,6 +11,7 @@ const ReactIconBackground = styled("img")(({ theme }) => {
   return {
     position: "absolute",
     height: "80%",
+    width: "80%",
     zIndex: -1
   }
 })
@@ -23,6 +24,7 @@ export function HomeSection() {
     
       display: "flex",
       justifyContent: "center",
+      position: "relative"
     }}>
       <BackgroundParticle />
 

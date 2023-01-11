@@ -39,7 +39,7 @@ export function CertificateSection() {
   return (
     <Box sx={{
       width: "100%",
-      height: "895px",
+      mt: 20,
 
       display: "flex",
       justifyContent: "center",

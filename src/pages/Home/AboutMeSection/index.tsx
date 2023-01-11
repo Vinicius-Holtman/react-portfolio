@@ -12,6 +12,7 @@ const NodeIconBackground = styled("img")(({ theme }) => {
   return {
     position: "absolute",
     height: "50%",
+    width: "50%",
     zIndex: -1
   }
 })
@@ -23,7 +24,6 @@ export function AboutMeSection() {
   return (
     <Box sx={{
       width: "100%",
-      height: "695px",
 
       display: "flex",
       justifyContent: "center",

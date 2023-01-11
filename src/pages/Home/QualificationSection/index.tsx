@@ -20,7 +20,7 @@ export function QualificationSection() {
   return (
     <Box sx={{
       width: "100%",
-      height: "765px",
+      mt: 20,
 
       display: "flex",
       justifyContent: "center",
