@@ -30,7 +30,7 @@ export function SkillSection() {
           <Card>
             <CardContent>
               <Typography variant="h4" color="secondary">Tools Developer</Typography>
-              <Grid container spacing={1} mt="20px">
+              <Grid container spacing={1.5} mt="20px">
                 {tools.map((tool) => (
                   <Grid key={tool.name} item xs={6} sm={4}>
                     <CardSkill name={tool.name} icon={tool.icon} />
@@ -45,7 +45,7 @@ export function SkillSection() {
           <Card>
             <CardContent>
               <Typography variant="h4" color="secondary">Frotend Developer</Typography>
-              <Grid container spacing={2} mt="20px">
+              <Grid container spacing={1.5} mt="20px">
                 {frontendSkills.map((skill) => (
                   <Grid key={skill.name} item xs={12} md={6}>
                     <CardSkill name={skill.name} icon={skill.icon} />
@@ -58,7 +58,7 @@ export function SkillSection() {
           <Card>
             <CardContent>
               <Typography variant="h4" color="secondary">Backend Developer</Typography>
-              <Grid container spacing={2} mt="20px">
+              <Grid container spacing={1.5} mt="20px">
                 {backendSkills.map((skill) => (
                   <Grid key={skill.name} item xs={12} md={6}>
                     <CardSkill name={skill.name} icon={skill.icon} />

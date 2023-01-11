@@ -1,4 +1,14 @@
-import { AppBar, Box, colors, styled, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  colors,
+  Link as MuiLink,
+  styled,
+  Toolbar,
+  Typography
+} from "@mui/material";
+import { Link } from "react-router-dom";
 
 const StyledToolbar = styled(Toolbar)({
   width: "100%",
@@ -20,7 +30,7 @@ export function Navbar() {
     }}>
       <StyledToolbar>
         <Box>
-          <Typography variant="h4" sx={{ display: { xs: "none", sm: "block" } }}>
+          <Typography variant="h4" sx={{ display: { sm: "block" } }}>
             H
           </Typography>
         </Box>
@@ -28,14 +38,22 @@ export function Navbar() {
           display="flex"
           alignItems="center"
           justifyContent="space-between"
-          gap={4}
+          gap={1}
         >
-          <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
-            Home
-          </Typography>
-          <Typography variant="h5" sx={{ display: { xs: "none", sm: "block" } }}>
-            Projects
-          </Typography>
+          <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <Typography color="secondary" variant="h5">
+                Home
+              </Typography>
+            </Link>
+          </Button>
+          <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
+            <Link to="/projects" style={{ textDecoration: "none" }}>
+              <Typography color="secondary" variant="h5">
+                Projects
+              </Typography>
+            </Link>
+          </Button>
         </Box>
       </StyledToolbar>
     </AppBar>
