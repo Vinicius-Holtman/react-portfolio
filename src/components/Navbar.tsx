@@ -42,14 +42,14 @@ export function Navbar() {
         >
           <Link to="/" style={{ textDecoration: "none" }}>
             <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
-              <Typography color="secondary" variant="h5">
+              <Typography color="primary" variant="h5">
                 Home
               </Typography>
             </Button>
           </Link>
           <Link to="/projects" style={{ textDecoration: "none" }}>
             <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
-              <Typography color="secondary" variant="h5">
+              <Typography color="primary" variant="h5">
                 Projects
               </Typography>
             </Button>
