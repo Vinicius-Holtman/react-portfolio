@@ -1,7 +1,8 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BackgroundParticle } from "../../lib/BackgroundParticle";
+import { CardProject } from "./CardProject";
 
 interface RepoProps {
   name: string;
@@ -23,7 +24,6 @@ export function Projects() {
       console.log(response.data)
       setRepos(response.data)
     })
-
   }, [])
 
   return (
@@ -41,31 +41,36 @@ export function Projects() {
         justifyContent: "space-between",
         alignItems: "center",
       }}>
-        {/* {repos.map((repo) => {
-
-        })} */}
-        <Card sx={{ maxWidth: 345 }}>
-          <CardContent>
-            <Typography gutterBottom variant="h3" component="div" color="primary">
-              Hoolbook
-            </Typography>
-            <Box display="flex" justifyContent="space-between" gap={4}>
-              <Typography variant="h6" color="secondary">
-                Typescript
-              </Typography>
-              <Button variant="outlined" size="small">Clone</Button>
-            </Box>
-            <Box display="flex" justifyContent="space-between" gap={4}>
-              <Typography variant="body2" color="secondary">
-                Created:
-              </Typography>
-              <Typography variant="body2" color="secondary">
-                Last_updated:
-              </Typography>
-            </Box>
-          </CardContent>
-        </Card>
-
+        <Box sx={{
+          display: "flex",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 2,
+        }}>
+          {repos.map((repo) => (
+            <Card sx={{ maxWidth: 345 }}>
+              <CardContent>
+                <Typography gutterBottom variant="h3" component="div" color="primary">
+                  {repo.name}
+                </Typography>
+                <Box display="flex" justifyContent="space-between" alignItems="center" mt={2} gap={4}>
+                  <Typography variant="h6" color="text.secondary">
+                    {repo.language}
+                  </Typography>
+                  <Button color="secondary" variant="outlined" size="small">SSH Clone</Button>
+                </Box>
+                <Box display="flex" justifyContent="space-between" alignItems="center" gap={4} mt={2}>
+                  <Typography variant="body2" color="text.secondary">
+                    Created: {repo.created_at}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Last_updated: {repo.updated_at}
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
       </Box>
     </Box>
   )
