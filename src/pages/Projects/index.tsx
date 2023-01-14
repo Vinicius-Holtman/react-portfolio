@@ -17,6 +17,7 @@ import { CardProject } from "./CardProject";
 import { dateFormatter } from "../../utils/formatter";
 import { tokens } from "../../styles/theme";
 import { Footbar } from "../../components/Footbar";
+import { RingLoader } from "react-spinners";
 
 export interface Repository {
   name: string;
@@ -34,16 +35,18 @@ export function Projects() {
 
   useEffect(() => {
     setIsLoading(true)
-    axios({
-      method: "GET",
-      url: "https://api.github.com/users/Vinicius-Holtman/repos?per_page=100",
-    })
-      .then((response) => {
-        setRepos(response.data)
+    setTimeout(() => {
+      axios({
+        method: "GET",
+        url: "https://api.github.com/users/Vinicius-Holtman/repos?per_page=100",
       })
-      .finally(() => {
-        setIsLoading(false)
-      })
+        .then((response) => {
+          setRepos(response.data)
+        })
+        .finally(() => {
+          setIsLoading(false)
+        })
+    }, 4000)
   }, [])
 
   const countPages = () => {
@@ -65,40 +68,43 @@ export function Projects() {
 
   return (
     <>
+      <BackgroundParticle height="830px" />
       <Box sx={{
         width: "100%",
+        height: "100%",
 
         display: "flex",
         justifyContent: "center",
-        position: "relative"
+        alignItems: isLoading ? "center" : "flex-start",
       }}>
-        <BackgroundParticle />
-
-        <Box sx={{
-          width: "1120px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center",
-          position: "relative",
-          gap: 2
-        }}>
-          <Grid container spacing={4}>
-            {cardProjectPagination.map((repo) => (
-              <Grid item xs={4}>
-                <CardProject repository={repo} />
-              </Grid>
-            ))}
-          </Grid>
-          <Stack spacing={2}>
-            <MuiPagination
-              count={countPages()}
-              color="secondary"
-              onChange={handleChangePage}
-              page={page}
-            />
-          </Stack>
-        </Box>
+        {isLoading ? (
+          <RingLoader color="#00875f" />
+        ) : (
+          <Box sx={{
+            width: "1120px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            gap: 2
+          }}>
+            <Grid container spacing={4}>
+              {cardProjectPagination.map((repo) => (
+                <Grid item xs={4}>
+                  <CardProject repository={repo} />
+                </Grid>
+              ))}
+            </Grid>
+            <Stack spacing={2}>
+              <MuiPagination
+                count={countPages()}
+                color="secondary"
+                onChange={handleChangePage}
+                page={page}
+              />
+            </Stack>
+          </Box>
+        )}
       </Box >
       <Footbar />
     </>

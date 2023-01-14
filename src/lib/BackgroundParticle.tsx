@@ -29,7 +29,7 @@ export function BackgroundParticle({ height }: BackgroundParticleProps) {
   return (
     <Box sx={{
       position: "absolute",
-      height: "100%",
+      height: height ?? "100%",
       width: "100%",
       zIndex: -1
     }}>
