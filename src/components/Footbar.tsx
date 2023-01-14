@@ -5,13 +5,15 @@ const Ambient = styled("img")(({ theme }) => {
   return {
     width: "100%",
     position: "absolute",
-    bottom: -7,
   }
 })
 
+interface FootbarProps {
+  bottom?: number;
+}
 
-export function Footbar() {
+export function Footbar({ bottom }: FootbarProps) {
   return (
-    <Ambient src={ambient} />
+    <Ambient src={ambient} style={{ bottom: bottom ?? 0 }}/>
   )
 }

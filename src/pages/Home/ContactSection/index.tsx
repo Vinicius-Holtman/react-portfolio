@@ -89,7 +89,7 @@ export function ContactSection() {
             </Grid>
           </Grid>
         </Box>
-        <Footbar />
+        <Footbar bottom={-7} />
       </Box>
     </>
   )
