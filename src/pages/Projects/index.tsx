@@ -81,6 +81,7 @@ export function Projects() {
           justifyContent: "space-between",
           alignItems: "center",
           position: "relative",
+          gap: 2
         }}>
           <Grid container spacing={4}>
             {cardProjectPagination.map((repo) => (
