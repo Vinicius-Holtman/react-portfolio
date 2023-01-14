@@ -1,5 +1,7 @@
 import styled from "@emotion/styled"
 import ambient from "../assets/ambient.svg"
+import { maxWidth } from "@mui/system";
+import { tokens } from "../styles/theme";
 
 const Ambient = styled("img")(({ theme }) => {
   return {
@@ -14,6 +16,9 @@ interface FootbarProps {
 
 export function Footbar({ bottom }: FootbarProps) {
   return (
-    <Ambient src={ambient} style={{ bottom: bottom ?? 0 }}/>
+    <Ambient
+      src={ambient}
+      style={{ bottom: bottom ?? 0 }}
+    />
   )
 }

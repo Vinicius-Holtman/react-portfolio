@@ -1,21 +1,13 @@
 import {
   Box,
-  Button,
   Pagination as MuiPagination,
   Grid,
-  Paper,
   Stack,
-  Tooltip,
-  Typography,
-  styled,
-  useTheme
 } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
 import { BackgroundParticle } from "../../lib/BackgroundParticle";
 import { CardProject } from "./CardProject";
-import { dateFormatter } from "../../utils/formatter";
-import { tokens } from "../../styles/theme";
 import { Footbar } from "../../components/Footbar";
 import { RingLoader } from "react-spinners";
 
@@ -90,7 +82,7 @@ export function Projects() {
           }}>
             <Grid container spacing={4}>
               {cardProjectPagination.map((repo) => (
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <CardProject repository={repo} />
                 </Grid>
               ))}
@@ -106,7 +98,6 @@ export function Projects() {
           </Box>
         )}
       </Box >
-      <Footbar />
     </>
   )
 }
