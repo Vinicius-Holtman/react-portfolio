@@ -22,7 +22,7 @@ import { RingLoader } from "react-spinners";
 export interface Repository {
   name: string;
   url: string;
-  sshUrl: string;
+  ssh_url: string;
   language: string;
   created_at: string;
   updated_at: string;
