@@ -5,7 +5,7 @@ import ImageHome from "../../../assets/imageHome.svg"
 import ReactIcon from "../../../assets/skills/react.svg"
 import { Icon } from "@iconify/react";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-import zIndex from "@mui/material/styles/zIndex";
+import curriculoHoltman from "../../../assets/curriculo_holtman_2023.pdf"
 
 const ReactIconBackground = styled("img")(({ theme }) => {
   return {
@@ -81,7 +81,7 @@ export function HomeSection() {
             </Box>
 
             <Box display="flex" mt={4} gap={3}>
-              <Button variant="outlined">
+              <Button variant="outlined" href={curriculoHoltman} download>
                 <Typography variant="button" fontWeight="bold">
                   Download CV
                 </Typography>

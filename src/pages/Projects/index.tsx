@@ -46,7 +46,7 @@ export function Projects() {
         .finally(() => {
           setIsLoading(false)
         })
-    }, 4000)
+    }, 1000)
   }, [])
 
   const countPages = () => {
