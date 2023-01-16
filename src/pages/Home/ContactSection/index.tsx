@@ -1,4 +1,4 @@
-import { Box, Typography, Card, CardContent, styled, useTheme, TextField, Grid, Button } from "@mui/material";
+import { Box, Typography, Card, CardContent, styled, useTheme, TextField, Grid, Button, Link } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import ambient from "../../../assets/ambient.svg"
@@ -61,9 +61,12 @@ export function ContactSection() {
                 </Box>
 
                 <Box display="flex" alignItems="center" gap={2}>
-                  <GitHubIcon sx={{ width: "30px", height: "30px" }} color="secondary" />
-                  <Icon color="#00875f" icon="mdi:linkedin" width={30} height={30} />
-                  <Icon color="#00875f" icon="ic:baseline-discord" width={30} height={30} />
+                  <Link href="https://github.com/Vinicius-Holtman">
+                    <GitHubIcon sx={{ width: "40px", height: "40px" }} color="secondary" />
+                  </Link>
+                  <Link href="https://linkedin.com/in/vinicius-holtman-9b014a208">
+                    <Icon color="#00875f" icon="mdi:linkedin" width={40} height={40} />
+                  </Link>
                 </Box>
               </Box>
             </Grid>
