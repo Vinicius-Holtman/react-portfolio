@@ -3,7 +3,9 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
 import "./styles.css"
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
-import imagePorti from "../../assets/image-porti.png"
+import dtMoney from "../../assets/carouselImg/dtMoney.png"
+import holtbook from "../../assets/carouselImg/holtbook.png"
+import reactAdmin from "../../assets/carouselImg/reactAdmin.png"
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -15,9 +17,9 @@ export function Carousel() {
       interval={10000}
       animation="cubeAnimation"
     >
-      <div data-src={imagePorti} />
-      <div data-src={imagePorti} />
-      <div data-src={imagePorti} />
+      <div data-src={dtMoney} />
+      <div data-src={holtbook} />
+      <div data-src={reactAdmin} />
     </AutoplaySlider>
   )
 }
