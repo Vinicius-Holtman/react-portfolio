@@ -58,9 +58,26 @@ export function CertificateSection() {
           Certificate
         </Typography>
 
-        <Grid container spacing={2}>
+        <Grid
+          container
+          spacing={2}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
           {certificatePagination.map((certificate) => (
-            <Grid item xs={12} sm={6} md={4} key={certificate.credentialCod}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              key={certificate.credentialCod}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
               <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140, objectFit: "cover" }}
