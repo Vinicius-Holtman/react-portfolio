@@ -3,12 +3,17 @@ import {
   Box,
   Button,
   colors,
+  IconButton,
+  Menu,
+  MenuItem,
   Link as MuiLink,
   styled,
   Toolbar,
   Typography
 } from "@mui/material";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
 const StyledToolbar = styled(Toolbar)({
   width: "100%",
@@ -19,6 +24,16 @@ const StyledToolbar = styled(Toolbar)({
 })
 
 export function Navbar() {
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+
   return (
     <AppBar position="sticky" sx={{
       width: "100%",
@@ -54,6 +69,41 @@ export function Navbar() {
               </Typography>
             </Button>
           </Link>
+
+          <IconButton
+            id="basic-button"
+            aria-controls={open ? 'basic-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+            sx={{ display: { xs: "block", sm: "none" } }}
+          >
+            <MenuOutlinedIcon />
+          </IconButton>
+          <Menu
+            id="basic-menu"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            MenuListProps={{
+              'aria-labelledby': 'basic-button',
+            }}
+          >
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <MenuItem onClick={handleClose}>
+                <Typography color="primary" variant="h5">
+                  Home
+                </Typography>
+              </MenuItem>
+            </Link>
+            <Link to="/projects" style={{ textDecoration: "none" }}>
+              <MenuItem onClick={handleClose}>
+                <Typography color="primary" variant="h5">
+                  Projects
+                </Typography>
+              </MenuItem>
+            </Link>
+          </Menu>
         </Box>
       </StyledToolbar>
     </AppBar>
