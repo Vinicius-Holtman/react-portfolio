@@ -1,6 +1,7 @@
 import { Box, colors, Typography, useTheme } from "@mui/material";
 import { Icon } from '@iconify/react';
 import { tokens } from "../styles/theme";
+import SAPIcon from '../assets/skills/sap_icon.png';
 
 interface CardSkillProps {
   name: string;
@@ -23,7 +24,7 @@ export function CardSkill({ name, icon }: CardSkillProps) {
       backgroundColor: colors.grey[900],
       boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"
     }}>
-      <Icon icon={icon} width={30} />
+      {icon === '' ? <img src={SAPIcon} width="50px" /> : <Icon icon={icon} width={30} />}
       <Typography color={colors.grey[300]}>{name}</Typography>
     </Box>
 

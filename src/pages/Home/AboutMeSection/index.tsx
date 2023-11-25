@@ -50,7 +50,7 @@ export function AboutMeSection() {
           <AboutCard
             icon={<WorkIcon color="secondary" />}
             title="Experience"
-            subtitle="1+ Years Working"
+            subtitle="2+ Years Working"
           />
           <AboutCard
             icon={<DvrIcon color="secondary" />}
@@ -60,7 +60,7 @@ export function AboutMeSection() {
           <AboutCard
             icon={<WorkspacePremiumIcon color="secondary" />}
             title="Certificate"
-            subtitle="25+ Completed"
+            subtitle="30+ Completed"
           />
         </Box>
 
@@ -70,8 +70,8 @@ export function AboutMeSection() {
           color={colors.grey[300]}
           maxWidth="500px"
         >
-          Programador determinado e ambicioso sempre em busca de novos desafios e conhecimentos.
-          Conheci a área de programação em 2018 no curso técnico do SENAI. Minhas primeiras linguagens estudas foram PHP, Javascript e SQL, após estudá-las adquiri apreço por desenvolvimento de aplicações. Possuo conhecimentos e experiência com projetos Full-Stack, meu objetivo dentro da programação é minha capacitação, sempre procurando me desenvolver melhor a cada dia.
+          Profissional de desenvolvimento determinado e ambicioso, constantemente em busca de novos desafios e oportunidades para aprimorar minhas habilidades. Ingressei na área de programação em 2018 durante o curso técnico no SENAI, onde tive meu primeiro contato com linguagens como PHP, Javascript e SQL. O domínio dessas linguagens despertou meu interesse no desenvolvimento de aplicações, impulsionando-me a explorar projetos Full-Stack.
+          Atualmente, tenho experiência e atuação em projetos envolvendo serviços SAP, destacando meu conhecimento em tecnologias como SAP Fiori Freestyle UI5, SAP Fiori Elements, SAP ABAP, SAP BTP, SAP CDS Views, SAP Hana, SAP Gateway e SAP Workflow. Minha trajetória profissional reflete meu comprometimento em alcançar a excelência na programação, e meu objetivo contínuo é aprimorar-me constantemente, contribuindo para soluções eficientes e inovadoras.
         </Typography>
       </Box>
     </Box>

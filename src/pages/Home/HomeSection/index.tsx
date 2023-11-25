@@ -2,7 +2,7 @@ import { Box, ListItem, ListItemButton, ListItemIcon, Typography, Button, styled
 import RocketseatIcon from "../../../assets/RocketseatIcon.svg"
 import { tokens } from "../../../styles/theme";
 import ImageHome from "../../../assets/imageHome.svg"
-import ReactIcon from "../../../assets/skills/react.svg"
+import SAPIcon from "../../../assets/skills/sap_background.svg"
 import { Icon } from "@iconify/react";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import curriculoHoltman from "../../../assets/curriculo_holtman_2023.pdf"
@@ -28,7 +28,7 @@ export function HomeSection() {
     }}>
       <BackgroundParticle />
 
-      <ReactIconBackground src={ReactIcon} alt="Background React" />
+      <ReactIconBackground src={SAPIcon} alt="Background React" />
       <Box sx={{
         width: "1120px",
         display: "flex",
@@ -76,7 +76,7 @@ export function HomeSection() {
                 Vinicius Holtman
               </Typography>
               <Typography fontWeight="bold" variant="h6" color="secondary">
-                Fullstack Developer
+                SAP Fullstack Developer - Fiori/ABAP/CDS Views/BTP
               </Typography>
             </Box>
 

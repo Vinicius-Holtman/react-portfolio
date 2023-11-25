@@ -126,3 +126,30 @@ export const tools = [
     icon: "logos:hyper",
   },
 ]
+
+export const sapTools = [
+  {
+    name: "SAP Fiori Freestyle UI5"
+  },
+  {
+    name: "SAP Fiori Elements"
+  },
+  {
+    name: "SAP ABAP"
+  },
+  {
+    name: "SAP BTP"
+  },
+  {
+    name: "SAP CDS Views"
+  },
+  {
+    name: "SAP Hana"
+  },
+  {
+    name: "SAP Gateway"
+  },
+  {
+    name: "SAP Workflow"
+  },
+]

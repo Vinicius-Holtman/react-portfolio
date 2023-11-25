@@ -1,7 +1,9 @@
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
 import { CardSkill } from "../../../components/CardSkill";
-import { tools, frontendSkills, backendSkills } from "../../../data/data-skill";
+import { tools, frontendSkills, backendSkills, sapTools } from "../../../data/data-skill";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import SAPIcon from '../../../assets/skills/sap_icon.svg'
+import SAPIcon from '../../../assets/skills/node.svg'
 
 export function SkillSection() {
   return (
@@ -27,6 +29,21 @@ export function SkillSection() {
         </Typography>
 
         <Box display="flex" gap={4} width="80%" mt={3}>
+          <Card>
+            <CardContent>
+              <Typography variant="h4" color="secondary">SAP Tools Developer</Typography>
+              <Grid container spacing={1.5} mt="20px">
+                {sapTools.map((tool) => (
+                  <Grid key={tool.name} item xs={6} sm={4}>
+                    <CardSkill name={tool.name} icon={''} />
+                  </Grid>
+                ))}
+              </Grid>
+            </CardContent>
+          </Card>
+        </Box>
+        
+        <Box display="flex" gap={4} width="80%" mt={1}>
           <Card>
             <CardContent>
               <Typography variant="h4" color="secondary">Tools Developer</Typography>

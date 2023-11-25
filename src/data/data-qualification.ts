@@ -1,10 +1,5 @@
 export const educations = [
   {
-    name: "English Rockfeller [Progress]",
-    courseName: "Educação Profissionalizante em Inglês",
-    date: "2022 - 2024"
-  },
-  {
     name: "Faculdade da Indústria [Interrupt]",
     courseName: "Bacharel em Sistema da Informação",
     date: "2022 - 2023"
@@ -18,10 +13,15 @@ export const educations = [
 
 export const experiences = [
   {
+    role: "Consultor SAP Fiori/ABAP/CDS Views/BTP",
+    company: "SPRO IT Solutions",
+    date: "Fev 2023 - Atualmente"
+  },
+  {
     role: "Analista Desenvolvedor Fullstack",
     company: "MM Tecnologia de Informação LTDA",
-    date: "Out 2021 - Nov 2022"
-  },
+    date: "Out 2021 - Fev 2023"
+  }
 ]
 
 // education = {
