@@ -50,7 +50,7 @@ export function ContactSection() {
                 <Box display="flex" alignItems="center" gap={2}>
                   <LocalPhoneIcon sx={{ width: "30px", height: "30px" }} color="secondary" /> {/* Phone */}
                   <Typography color={colors.grey[300]}>
-                    +55 (41)99214-8498
+                    +55 (41)99199-6195
                   </Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap={2}>

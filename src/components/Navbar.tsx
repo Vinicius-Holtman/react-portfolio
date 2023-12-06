@@ -14,6 +14,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import Logo from '../assets/logo.png'
 
 const StyledToolbar = styled(Toolbar)({
   width: "100%",
@@ -45,9 +46,7 @@ export function Navbar() {
     }}>
       <StyledToolbar>
         <Box>
-          <Typography variant="h4" sx={{ display: { sm: "block" } }}>
-            H
-          </Typography>
+          <img src={Logo} width="50px" />
         </Box>
         <Box
           display="flex"

@@ -150,6 +150,12 @@ export const sapTools = [
     name: "SAP Gateway"
   },
   {
-    name: "SAP Workflow"
+    name: "SAP RAP"
   },
+  {
+    name: "SAP Web IDE"
+  },
+  {
+    name: "SAP BAS"
+  }
 ]
