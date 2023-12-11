@@ -6,10 +6,12 @@ import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import dtMoney from "../../assets/carouselImg/dtMoney.png"
 import holtbook from "../../assets/carouselImg/holtbook.png"
 import reactAdmin from "../../assets/carouselImg/reactAdmin.png"
+import { useEffect } from 'react';
+
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
-
 export function Carousel() {
+
   return (
     <AutoplaySlider
       play={true}

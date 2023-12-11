@@ -1,5 +1,5 @@
 import { Box, Typography, Link as MuiLink, useTheme, Button } from "@mui/material";
-import { Carousel } from "../../../components/Carousel";
+// import { Carousel } from "../../../components/Carousel";
 import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import { BackgroundSky } from "../../../lib/BackgroundSky";
 import { tokens } from "../../../styles/theme";
@@ -56,9 +56,9 @@ export function ProjectsSection() {
           </MuiLink>
         </Box>
 
-        <Box display="flex" gap={4} width="80%">
+        {/* <Box display="flex" gap={4} width="80%">
           <Carousel />
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   )

@@ -19,7 +19,7 @@ export function TimelineEducation() {
   return (
     <Timeline position="alternate">
       {educations.map((education) => (
-        <TimelineItem>
+        <TimelineItem key={education.courseName}>
           <TimelineSeparator>
             <TimelineDot color='secondary' />
             <TimelineConnector />
