@@ -12,12 +12,12 @@ export function Home() {
     <>
       <Box>
         <HomeSection />
-        {/* <AboutMeSection />
+        <AboutMeSection />
         <SkillSection />
         <ProjectsSection />
         <CertificateSection />
         <QualificationSection />
-        <ContactSection /> */}
+        <ContactSection />
       </Box>
     </>
   )
