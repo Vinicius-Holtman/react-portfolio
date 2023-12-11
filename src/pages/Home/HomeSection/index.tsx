@@ -94,8 +94,8 @@ export function HomeSection() {
             </Box>
           </Box>
 
-          <Box>
-            <img src={ImageHome} alt="Image Home" />
+          <Box width="100%">
+            <img src={ImageHome} alt="Image Home" className="imageHome" />
           </Box>
         </Box>
 

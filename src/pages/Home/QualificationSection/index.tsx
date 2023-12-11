@@ -28,7 +28,7 @@ export function QualificationSection() {
       <BackgroundParticle height="765px" />
 
       <Box sx={{
-        width: "1120px",
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -52,10 +52,10 @@ export function QualificationSection() {
               <Tab icon={<WorkIcon color="secondary" />} iconPosition="start" label="Experience" value="2" />
             </TabList>
 
-            <TabPanel value="1" sx={{ width: "500px" }}>
+            <TabPanel value="1" sx={{ width: "auto" }}>
               <TimelineEducation />
             </TabPanel>
-            <TabPanel value="2" sx={{ width: "500px" }}>
+            <TabPanel value="2" sx={{ width: "auto" }}>
               <TimelineExperience />
             </TabPanel>
           </TabContext>
