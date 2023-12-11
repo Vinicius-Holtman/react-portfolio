@@ -54,7 +54,7 @@ export function Navbar() {
           justifyContent="space-between"
           gap={1}
         >
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/react-portifolio" style={{ textDecoration: "none" }}>
             <Button variant="text" sx={{ display: { xs: "none", sm: "block" } }}>
               <Typography color="primary" variant="h5">
                 Home
@@ -88,7 +88,7 @@ export function Navbar() {
               'aria-labelledby': 'basic-button',
             }}
           >
-            <Link to="/" style={{ textDecoration: "none" }}>
+            <Link to="/react-portifolio" style={{ textDecoration: "none" }}>
               <MenuItem onClick={handleClose}>
                 <Typography color="primary" variant="h5">
                   Home
