@@ -8,7 +8,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { TimelineEducation } from "../../../components/TimelineEducation";
 import { TimelineExperience } from "../../../components/TimelineExperience";
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 export function QualificationSection() {
   const [value, setValue] = useState('1');
@@ -25,7 +25,7 @@ export function QualificationSection() {
       display: "flex",
       justifyContent: "center",
     }}>
-      <BackgroundParticle height="765px" />
+      {/* <BackgroundParticle height="765px" /> */}
 
       <Box sx={{
         width: "100%",

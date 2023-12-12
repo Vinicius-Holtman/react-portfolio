@@ -1,7 +1,7 @@
 import { Box, Typography, Link as MuiLink, useTheme, Button } from "@mui/material";
-// import { Carousel } from "../../../components/Carousel";
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-import { BackgroundSky } from "../../../lib/BackgroundSky";
+import { Carousel } from "../../../components/Carousel";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundSky } from "../../../lib/BackgroundSky";
 import { tokens } from "../../../styles/theme";
 import { Link } from "react-router-dom";
 
@@ -18,8 +18,8 @@ export function ProjectsSection() {
       justifyContent: "center",
       alignItems: "center"
     }}>
-      <BackgroundParticle height="895px" />
-      <BackgroundSky />
+      {/* <BackgroundParticle height="895px" />
+      <BackgroundSky /> */}
 
       <Box sx={{
         width: "1120px",
@@ -56,9 +56,9 @@ export function ProjectsSection() {
           </MuiLink>
         </Box>
 
-        {/* <Box display="flex" gap={4} width="80%">
+        <Box display="flex" gap={4} width="80%">
           <Carousel />
-        </Box> */}
+        </Box>
       </Box>
     </Box>
   )

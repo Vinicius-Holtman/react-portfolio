@@ -1,6 +1,6 @@
 import { Box, Typography, Card, CardContent, styled, useTheme, TextField, Grid, Button, Link, Snackbar, SnackbarOrigin, Alert } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import { tokens } from "../../../styles/theme";
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -97,7 +97,7 @@ export function ContactSection() {
         position: "relative"
       }}>
         
-        <BackgroundParticle height="100%" />
+        {/* <BackgroundParticle height="100%" /> */}
 
         <Box sx={{
           width: "1120px",

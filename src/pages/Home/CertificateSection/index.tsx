@@ -11,7 +11,7 @@ import {
   Pagination as MuiPagination,
   Stack
 } from "@mui/material";
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { certificates } from "../../../data/data-certificate";
 import { ChangeEvent, useState } from "react";
@@ -44,7 +44,7 @@ export function CertificateSection() {
       display: "flex",
       justifyContent: "center",
     }}>
-      <BackgroundParticle />
+      {/* <BackgroundParticle /> */}
 
       <Box sx={{
         width: "1120px",

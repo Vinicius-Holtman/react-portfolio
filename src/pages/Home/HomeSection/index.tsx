@@ -4,7 +4,7 @@ import { tokens } from "../../../styles/theme";
 import ImageHome from "../../../assets/imageHome.svg"
 import SAPIcon from "../../../assets/skills/sap_background.svg"
 import { Icon } from "@iconify/react";
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 import curriculoHoltman from "../../../assets/curriculo_holtman_2023.pdf"
 
 const ReactIconBackground = styled("img")(({ theme }) => {
@@ -26,7 +26,7 @@ export function HomeSection() {
       justifyContent: "center",
       position: "relative"
     }}>
-      <BackgroundParticle />
+      {/* <BackgroundParticle /> */}
 
       <ReactIconBackground src={SAPIcon} alt="Background React" />
       <Box sx={{

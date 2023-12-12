@@ -1,7 +1,7 @@
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
 import { CardSkill } from "../../../components/CardSkill";
 import { tools, frontendSkills, backendSkills, sapTools } from "../../../data/data-skill";
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 // import SAPIcon from '../../../assets/skills/sap_icon.svg'
 import SAPIcon from '../../../assets/skills/node.svg'
 
@@ -14,7 +14,7 @@ export function SkillSection() {
       display: "flex",
       justifyContent: "center",
     }}>
-      <BackgroundParticle />
+      {/* <BackgroundParticle /> */}
 
       <Box sx={{
         width: "1120px",

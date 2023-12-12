@@ -4,9 +4,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import { AboutCard } from "../../../components/AboutCard";
 import IconNode from "../../../assets/skills/node.svg"
-import { BackgroundSky } from "../../../lib/BackgroundSky";
 import { tokens } from "../../../styles/theme";
-import { BackgroundParticle } from "../../../lib/BackgroundParticle";
+// import { BackgroundSky } from "../../../lib/BackgroundSky";
+// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
 
 const NodeIconBackground = styled("img")(({ theme }) => {
   return {
@@ -28,8 +28,8 @@ export function AboutMeSection() {
       display: "flex",
       justifyContent: "center",
     }}>
-      <BackgroundSky />
-      <BackgroundParticle height="695px" />
+      {/* <BackgroundSky /> */}
+      {/* <BackgroundParticle height="695px" /> */}
 
       <NodeIconBackground src={IconNode} alt="Image Background Node" />
 
