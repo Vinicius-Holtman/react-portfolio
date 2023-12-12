@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import { ChangeEvent, useEffect, useState } from "react";
 import axios from "axios";
-import { BackgroundParticle } from "../../lib/BackgroundParticle";
+// import { BackgroundParticle } from "../../lib/BackgroundParticle";
 import { CardProject } from "./CardProject";
 import { Footbar } from "../../components/Footbar";
 import { RingLoader } from "react-spinners";
@@ -60,7 +60,7 @@ export function Projects() {
 
   return (
     <>
-      <BackgroundParticle height="830px" />
+      {/* <BackgroundParticle height="830px" /> */}
       <Box sx={{
         width: "100%",
         height: "100%",
