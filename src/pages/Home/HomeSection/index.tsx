@@ -86,11 +86,6 @@ export function HomeSection() {
                   Download CV
                 </Typography>
               </Button>
-              <Button variant="contained">
-                <Typography variant="button" fontWeight="bold">
-                  Let's talk
-                </Typography>
-              </Button>
             </Box>
           </Box>
 
