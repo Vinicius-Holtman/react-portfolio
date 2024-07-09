@@ -50,7 +50,7 @@ export function AboutMeSection() {
           <AboutCard
             icon={<WorkIcon color="secondary" />}
             title="Experience"
-            subtitle="2+ Years Working"
+            subtitle="3+ Years Working"
           />
           <AboutCard
             icon={<DvrIcon color="secondary" />}
@@ -60,7 +60,7 @@ export function AboutMeSection() {
           <AboutCard
             icon={<WorkspacePremiumIcon color="secondary" />}
             title="Certificate"
-            subtitle="30+ Completed"
+            subtitle="40+ Completed"
           />
         </Box>
 
@@ -71,7 +71,7 @@ export function AboutMeSection() {
           maxWidth="500px"
         >
           Profissional de desenvolvimento determinado e ambicioso, constantemente em busca de novos desafios e oportunidades para aprimorar minhas habilidades. Ingressei na área de programação em 2018 durante o curso técnico no SENAI, onde tive meu primeiro contato com linguagens como PHP, Javascript e SQL. O domínio dessas linguagens despertou meu interesse no desenvolvimento de aplicações, impulsionando-me a explorar projetos Full-Stack.
-          Atualmente, tenho experiência e atuação em projetos envolvendo serviços SAP, destacando meu conhecimento em tecnologias como SAP Fiori Freestyle UI5, SAP Fiori Elements, SAP ABAP, SAP BTP, SAP CDS Views, SAP Hana, SAP Gateway e SAP Workflow. Minha trajetória profissional reflete meu comprometimento em alcançar a excelência na programação, e meu objetivo contínuo é aprimorar-me constantemente, contribuindo para soluções eficientes e inovadoras.
+          Atualmente, tenho experiência e atuação em projetos envolvendo serviços SAP, destacando meu conhecimento em tecnologias como SAP Fiori Freestyle UI5, SAP Fiori Elements, SAP ABAP, SAP BTP, SAP CDS Views, SAP BOPF, SAP Hana, SAP Gateway e SAP Workflow. Minha trajetória profissional reflete meu comprometimento em alcançar a excelência na programação, e meu objetivo contínuo é aprimorar-me constantemente, contribuindo para soluções eficientes e inovadoras.
         </Typography>
       </Box>
     </Box>

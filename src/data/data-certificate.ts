@@ -20,8 +20,107 @@ import certificate19 from "../assets/certificates/Praticando_Orientação_a_Obje
 import certificate20 from "../assets/certificates/Projetos_ageis_com_SCRUM.png"
 import certificate21 from "../assets/certificates/ReactJs_Ignite_Rocketseat.png"
 import certificate22 from "../assets/certificates/Trabalhando_com_Componentes_em_React.png"
+import certificate23 from "../assets/certificates/Getting_Started_Adobe_Forms.png"
+import certificate24 from "../assets/certificates/Learning_Basics_SAP_Fiori.png"
+import certificate25 from "../assets/certificates/Learning_Basics_SAP_Fiori.png"
+import certificate26 from "../assets/certificates/Discovering_SAP_BTP.png"
+import certificate27 from "../assets/certificates/SAP_ABAP_CDS.jpg"
+import certificate28 from "../assets/certificates/ABAP_Orientado_Objetos.jpg"
+import certificate29 from "../assets/certificates/CDS_Views.png"
+import certificate30 from "../assets/certificates/SAP_Fiori_Elements.png"
+import certificate31 from "../assets/certificates/SAP_Gateway.png"
 
 export const certificates = [
+  {
+    certificateName: "Getting Started with SAP Cloud Application Programming Model",
+    company: "SAP",
+    issueDate: "Jun 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "7befd267-aa5e-474c-bcef-279008084b9a",
+    credentialUrl: "https://www.credly.com/badges/7befd267-aa5e-474c-bcef-279008084b9a/public_url",
+    certificateImage: certificate24
+  },
+  {
+    certificateName: "Getting Started with SAP Forms Service by Adobe",
+    company: "SAP",
+    issueDate: "Jun 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "310e7a5d-2ff4-4e4c-b907-da91ac6751d4",
+    credentialUrl: "https://www.credly.com/badges/310e7a5d-2ff4-4e4c-b907-da91ac6751d4/public_url",
+    certificateImage: certificate23
+  },
+  {
+    certificateName: "Learning the Basics of SAP Fiori",
+    company: "SAP",
+    issueDate: "Jun 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "471cb949-55f1-40e9-bb00-bbec3471363a",
+    credentialUrl: "https://www.credly.com/badges/471cb949-55f1-40e9-bb00-bbec3471363a/public_url",
+    certificateImage: certificate25
+  },
+  {
+    certificateName: "SAP ABAP CDS (Core Data Service) Views for S/4 Hana",
+    company: "SAP",
+    issueDate: "Jun 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "UC-5e4f5fa7-2d7e-475c-9a2b-8db1974efcfb",
+    credentialUrl: "https://www.udemy.com/certificate/UC-5e4f5fa7-2d7e-475c-9a2b-8db1974efcfb/",
+    certificateImage: certificate27
+  },
+  {
+    certificateName: "SAP CDS Views - Moovi",
+    company: "SAP",
+    issueDate: "Abr 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "1",
+    credentialUrl: "",
+    certificateImage: certificate29
+  },
+  {
+    certificateName: "SAP Fiori Elements - Moovi",
+    company: "SAP",
+    issueDate: "Jan 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "2",
+    credentialUrl: "",
+    certificateImage: certificate30
+  },
+  {
+    certificateName: "SAP Gateway Service Builder e OData - Moovi",
+    company: "SAP",
+    issueDate: "Jan 2024",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "3",
+    credentialUrl: "",
+    certificateImage: certificate31
+  },
+  {
+    certificateName: "Discovering SAP Business Technology Platform",
+    company: "SAP",
+    issueDate: "Dez 2023",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "8ec3c337-9821-4ce6-878a-cba76c1d663c",
+    credentialUrl: "https://www.credly.com/badges/8ec3c337-9821-4ce6-878a-cba76c1d663c/public_url",
+    certificateImage: certificate26
+  },
+  {
+    certificateName: "ABAP Orientado a Objetos",
+    company: "SAP",
+    issueDate: "Fev 2023",
+    isExpired: false,
+    expiredDate: null,
+    credentialCod: "UC-4328b542-8701-452f-af64-1b8188a524b2",
+    credentialUrl: "https://www.udemy.com/certificate/UC-4328b542-8701-452f-af64-1b8188a524b2/",
+    certificateImage: certificate28
+  },
   {
     certificateName: "NodeJs Ignite Rocketseat",
     company: "Rocketseat",

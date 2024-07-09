@@ -144,6 +144,15 @@ export const sapTools = [
     name: "SAP CDS Views"
   },
   {
+    name: "SAP Adobe Forms"
+  },
+  {
+    name: "SAP BOPF"
+  },
+  {
+    name: "SAP CAP"
+  },
+  {
     name: "SAP Hana"
   },
   {

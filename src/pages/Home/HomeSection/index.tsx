@@ -5,7 +5,7 @@ import ImageHome from "../../../assets/imageHome.svg"
 import SAPIcon from "../../../assets/skills/sap_background.svg"
 import { Icon } from "@iconify/react";
 // import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-import curriculoHoltman from "../../../assets/curriculo_holtman_2023.pdf"
+import curriculoHoltman from "../../../assets/CV_Vinicius_Holtman_2024.pdf"
 
 const ReactIconBackground = styled("img")(({ theme }) => {
   return {
@@ -76,7 +76,7 @@ export function HomeSection() {
                 Vinicius Holtman
               </Typography>
               <Typography fontWeight="bold" variant="h6" color="secondary">
-                SAP Fullstack Developer - Fiori/ABAP/CDS Views/BTP
+                SAP Fullstack Developer - Fiori/ABAP/CDS Views/BTP/BOPF
               </Typography>
             </Box>
 

@@ -1,5 +1,10 @@
 export const educations = [
   {
+    name: "Faculdade Estácio",
+    courseName: "Análise e Desenvolvimento de Sistema",
+    date: "2024 - 2026"
+  },
+  {
     name: "Faculdade da Indústria [Interrupt]",
     courseName: "Bacharel em Sistema da Informação",
     date: "2022 - 2023"
@@ -21,6 +26,11 @@ export const experiences = [
     role: "Analista Desenvolvedor Fullstack",
     company: "MM Tecnologia de Informação LTDA",
     date: "Out 2021 - Fev 2023"
+  },
+  {
+    role: "Analista Desenvolvedor Fullstack",
+    company: "ZT Consulting",
+    date: "Mai 2020 - Jun 2021"
   }
 ]
 
