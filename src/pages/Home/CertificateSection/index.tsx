@@ -68,7 +68,13 @@ export function CertificateSection() {
       <RevealGroup stagger={0.12}>
         <Grid container spacing={3} justifyContent="center">
           {featuredCertificates.map((cert) => (
-            <Grid item xs={12} md={6} key={cert.code} sx={{ display: "flex" }}>
+            <Grid
+              item
+              xs={12}
+              md={featuredCertificates.length >= 3 ? 4 : 6}
+              key={cert.code}
+              sx={{ display: "flex" }}
+            >
               <Card
                 component={motion.div}
                 variants={revealItemVariants}
