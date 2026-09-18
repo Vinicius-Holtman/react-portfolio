@@ -21,8 +21,16 @@ const Item = styled(Paper)(({ theme }) => {
   return {
     backgroundColor: colors.grey[800],
     ...theme.typography.body2,
-    padding: theme.spacing(2),
+    padding: theme.spacing(2.5),
+    height: "100%",
+    border: "1px solid rgba(255,255,255,0.07)",
     color: theme.palette.text.secondary,
+    transition: "border-color .25s ease, transform .25s ease, box-shadow .25s ease",
+    "&:hover": {
+      borderColor: theme.palette.primary.main,
+      transform: "translateY(-6px)",
+      boxShadow: "0 20px 40px -30px rgba(0,179,126,0.9)",
+    },
   }
 });
 
@@ -82,7 +90,7 @@ export function CardProject({ repository }: CardProjectProps) {
             textOverflow: "ellipsis"
           }}
             gutterBottom
-            variant="h3"
+            variant="h4"
             component="div"
             color="primary"
           >
@@ -90,8 +98,8 @@ export function CardProject({ repository }: CardProjectProps) {
           </Typography>
         </Tooltip>
         <Box display="flex" justifyContent="space-between" alignItems="center" mt={2} gap={4}>
-          <Typography variant="h6" color="secondary">
-            {repository.language}
+          <Typography variant="h6" color="primary">
+            {repository.language ?? "—"}
           </Typography>
           <Button
             color="secondary"

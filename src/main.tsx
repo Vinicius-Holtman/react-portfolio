@@ -1,16 +1,13 @@
-import { StyledEngineProvider } from '@mui/material/styles'
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import App from './App'
-import './styles/index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import "./styles/index.css";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <StyledEngineProvider injectFirst> */}
-        <App />
-      {/* </StyledEngineProvider> */}
+    <BrowserRouter basename="/react-portfolio">
+      <App />
     </BrowserRouter>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

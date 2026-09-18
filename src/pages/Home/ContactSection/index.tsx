@@ -1,201 +1,240 @@
-import { Box, Typography, Card, CardContent, styled, useTheme, TextField, Grid, Button, Link, Snackbar, SnackbarOrigin, Alert } from "@mui/material";
-import GitHubIcon from '@mui/icons-material/GitHub';
-// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-import { tokens } from "../../../styles/theme";
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import EmailIcon from '@mui/icons-material/Email';
-import { Icon } from "@iconify/react";
-import SendIcon from '@mui/icons-material/Send';
-import { Footbar } from "../../../components/Footbar";
 import { useState } from "react";
-import emailjs from '@emailjs/browser'
-import React from "react";
+import {
+  Alert,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Grid,
+  Snackbar,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { motion, useReducedMotion } from "framer-motion";
+import SendIcon from "@mui/icons-material/Send";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import EmailIcon from "@mui/icons-material/Email";
+import PlaceIcon from "@mui/icons-material/Place";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import emailjs from "@emailjs/browser";
+import { contactChannels, contactSection, footer } from "../../../data/content";
+import { useT } from "../../../i18n";
+import { Section } from "../../../components/Section";
+import { SectionTitle } from "../../../components/SectionTitle";
+import { Reveal } from "../../../components/motion/Reveal";
 
-interface State extends SnackbarOrigin {
-  open: boolean;
-}
+type Feedback = { type: "success" | "error" | "warning"; message: string } | null;
 
 export function ContactSection() {
-  const theme = useTheme()
-  const colors = tokens(theme.palette.mode)
+  const t = useT();
+  const reduced = useReducedMotion();
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [successSendEmail, setSuccessSendEmail] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
+  const [feedback, setFeedback] = useState<Feedback>(null);
 
-  const [checkForm, setCheckForm] = React.useState<State>({
-    open: false,
-    vertical: 'bottom',
-    horizontal: 'center',
-  });
-
-  const [openSnackbarSendEmail, setOpenSnackbarSendEmail] = React.useState<State>({
-    open: false,
-    vertical: 'bottom',
-    horizontal: 'center',
-  });
-
-  const [errorSendEmail, setErrorSendEmail] = React.useState<State>({
-    open: false,
-    vertical: 'bottom',
-    horizontal: 'center',
-  });
-
-  const handleName = (event: any) => {
-    setName(event.target.value);
-  };
-
-  const handleEmail = (event: any) => {
-    setEmail(event.target.value);
-  };
-  
-  const handleSendMessage = (event: any) => {
-    setMessage(event.target.value);
-  };
-
-  function HandleSendEmail() {
-    console.log('cheguei aqui')
-    if (name === '' || email === '' || message === '') {
-      setCheckForm({ ...checkForm, open: true });
-    } else {
-      const templateParams = {
-        from_name: name,
-        email: email,
-        message: message
-      }
-
-      emailjs.send('service_uts0hgf', 'template_lqtr0ae', templateParams, 'APpzSATRJEoaP-hPo')
-      .then((res) => {
-        setSuccessSendEmail(true)
-        setName('')
-        setEmail('')
-        setMessage('')
-
-        setOpenSnackbarSendEmail({ ...openSnackbarSendEmail, open: true });
-      }).catch((err) => {
-        setErrorSendEmail({ ...errorSendEmail, open: true });
-      });
+  const handleSend = () => {
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setFeedback({ type: "warning", message: t(contactSection.incomplete) });
+      return;
     }
-  }
 
-  const handleCloseSnackbar = () => {
-    setOpenSnackbarSendEmail({ ...openSnackbarSendEmail, open: false });
-    setCheckForm({ ...checkForm, open: false });
-    setErrorSendEmail({ ...errorSendEmail, open: false });
+    setSending(true);
+    emailjs
+      .send(
+        "service_uts0hgf",
+        "template_lqtr0ae",
+        { from_name: name, email, message },
+        "APpzSATRJEoaP-hPo"
+      )
+      .then(() => {
+        setFeedback({ type: "success", message: t(contactSection.success) });
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch(() => {
+        setFeedback({ type: "error", message: t(contactSection.error) });
+      })
+      .finally(() => setSending(false));
   };
+
+  const channels = [
+    {
+      icon: <LocalPhoneIcon color="primary" />,
+      value: contactChannels.phone,
+      href: `tel:${contactChannels.phone.replace(/[^\d+]/g, "")}`,
+    },
+    {
+      icon: <EmailIcon color="primary" />,
+      value: contactChannels.email,
+      href: `mailto:${contactChannels.email}`,
+    },
+    {
+      icon: <PlaceIcon color="primary" />,
+      value: t(contactSection.location),
+    },
+  ];
 
   return (
-    <>
-      <Box sx={{
-        width: "100%",
-        height: "585px",
-        mt: 15,
+    <Section id="contact" sx={{ pb: { xs: 6, md: 8 } }}>
+      <SectionTitle
+        title={t(contactSection.title)}
+        kicker={t(contactSection.kicker)}
+      />
 
-        display: "flex",
-        justifyContent: "center",
-        position: "relative"
-      }}>
-        
-        {/* <BackgroundParticle height="100%" /> */}
-
-        <Box sx={{
-          width: "1120px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          gap: 5,
-        }}>
-          {checkForm && (
-            <>
-              <Snackbar open={checkForm.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-                <Alert onClose={handleCloseSnackbar} severity="warning" sx={{ width: '100%' }}>
-                  Informe todos os dados para envio do formulário!
-                </Alert>
-              </Snackbar>
-            </>
-          )}
-
-          {successSendEmail && (
-            <>
-              <Snackbar open={openSnackbarSendEmail.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-                <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-                  Email enviado com sucesso!
-                </Alert>
-              </Snackbar>
-            </>
-          )}
-
-          {errorSendEmail && (
-            <>
-              <Snackbar open={errorSendEmail.open} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-                <Alert onClose={handleCloseSnackbar} severity="error" sx={{ width: '100%' }}>
-                  Ocorreu um erro ao enviar o email. Por favor, tente novamente mais tarde.
-                </Alert>
-              </Snackbar>
-            </>
-          )}
-
-          <Typography variant="h2" color="primary">
-            Entre em contato
-          </Typography>
-
-          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid item xs={6}>
-              <Typography variant="h5" color={colors.grey[300]}>
-                Fique a vontade para escolher uma forma de contato 😊. Irei responder o mais breve possivel!
-              </Typography>
-              <Box display="flex" flexDirection="column" gap={3} mt={4}>
-                <Box display="flex" alignItems="center" gap={2}>
-                  <LocalPhoneIcon sx={{ width: "30px", height: "30px" }} color="secondary" /> {/* Phone */}
-                  <Typography color={colors.grey[300]}>
-                    +55 (41)99199-6195
-                  </Typography>
+      <Grid container spacing={{ xs: 4, md: 6 }} alignItems="stretch">
+        <Grid item xs={12} md={5}>
+          <Reveal direction="right">
+            <Box display="flex" flexDirection="column" gap={2.5}>
+              {channels.map((channel) => (
+                <Box
+                  key={channel.value}
+                  component={channel.href ? "a" : "div"}
+                  href={channel.href}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 2,
+                    p: 2,
+                    borderRadius: 3,
+                    border: "1px solid",
+                    borderColor: "divider",
+                    textDecoration: "none",
+                    color: "text.primary",
+                    transition: "border-color .25s ease, transform .25s ease",
+                    "&:hover": {
+                      borderColor: "primary.main",
+                      transform: channel.href ? "translateX(4px)" : "none",
+                    },
+                  }}
+                >
+                  {channel.icon}
+                  <Typography variant="h6">{channel.value}</Typography>
                 </Box>
-                <Box display="flex" alignItems="center" gap={2}>
-                  <EmailIcon sx={{ width: "30px", height: "30px" }} color="secondary" />{/* Email */}
-                  <Typography color={colors.grey[300]}>
-                    vinicius.holt.dev@gmail.com
-                  </Typography>
-                </Box>
+              ))}
 
-                <Box display="flex" alignItems="center" gap={2}>
-                  <Link href="https://github.com/Vinicius-Holtman">
-                    <GitHubIcon sx={{ width: "40px", height: "40px" }} color="secondary" />
-                  </Link>
-                  <Link href="https://linkedin.com/in/vinicius-holtman-9b014a208">
-                    <Icon color="#00875f" icon="mdi:linkedin" width={40} height={40} />
-                  </Link>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={6}>
-              <Card>
-                <CardContent>
-                  <Box display="flex" flexDirection="column" gap={1}>
-                    <Typography variant="h4" color="secondary">Send Me a Message</Typography>
-                    <TextField id="name" label="Your Name" variant="filled" sx={{ mt: "15px" }} onChange={handleName} value={name} />
-                    <TextField id="email" label="Your Email" variant="filled" onChange={handleEmail} value={email} />
-                    <TextField
-                      id="message"
-                      label="Message"
-                      variant="filled"
-                      multiline
-                      maxRows={4}
-                      value={message}
-                      onChange={handleSendMessage}
-                    />
-
-                    <Button sx={{ mt: 3 }} startIcon={<SendIcon />} variant="contained" onClick={() => HandleSendEmail()}>Send</Button>
+              <Box display="flex" gap={1.5} mt={0.5}>
+                {[
+                  {
+                    key: "github",
+                    href: contactChannels.github,
+                    icon: <GitHubIcon />,
+                  },
+                  {
+                    key: "linkedin",
+                    href: contactChannels.linkedin,
+                    icon: <LinkedInIcon />,
+                  },
+                ].map((social) => (
+                  <Box
+                    key={social.key}
+                    component={motion.a}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={reduced ? undefined : { y: -4, scale: 1.06 }}
+                    sx={{
+                      display: "grid",
+                      placeItems: "center",
+                      width: 46,
+                      height: 46,
+                      borderRadius: "50%",
+                      border: "1px solid",
+                      borderColor: "divider",
+                      color: "primary.main",
+                      "&:hover": { borderColor: "primary.main" },
+                    }}
+                  >
+                    {social.icon}
                   </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          </Grid>
-        </Box>
-        <Footbar bottom={-7} />
+                ))}
+              </Box>
+            </Box>
+          </Reveal>
+        </Grid>
+
+        <Grid item xs={12} md={7}>
+          <Reveal direction="left">
+            <Card sx={{ backgroundColor: "background.paper", height: "100%" }}>
+              <CardContent sx={{ p: { xs: 2.5, md: 3.5 } }}>
+                <Typography variant="h4" color="primary" mb={2.5}>
+                  {t(contactSection.formTitle)}
+                </Typography>
+
+                <Box display="flex" flexDirection="column" gap={2}>
+                  <TextField
+                    label={t(contactSection.name)}
+                    variant="filled"
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                    fullWidth
+                  />
+                  <TextField
+                    label={t(contactSection.email)}
+                    type="email"
+                    variant="filled"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    fullWidth
+                  />
+                  <TextField
+                    label={t(contactSection.message)}
+                    variant="filled"
+                    value={message}
+                    onChange={(event) => setMessage(event.target.value)}
+                    multiline
+                    minRows={4}
+                    fullWidth
+                  />
+
+                  <Button
+                    variant="contained"
+                    startIcon={<SendIcon />}
+                    onClick={handleSend}
+                    disabled={sending}
+                    sx={{ alignSelf: "flex-start", mt: 1, color: "#06120D" }}
+                  >
+                    {sending ? t(contactSection.sending) : t(contactSection.send)}
+                  </Button>
+                </Box>
+              </CardContent>
+            </Card>
+          </Reveal>
+        </Grid>
+      </Grid>
+
+      <Box
+        sx={{
+          mt: { xs: 7, md: 10 },
+          pt: 3,
+          borderTop: "1px solid",
+          borderColor: "divider",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="caption" color="text.secondary">
+          © {new Date().getFullYear()} Vinicius Holtman · {t(footer.rights)}
+        </Typography>
       </Box>
-    </>
-  )
+
+      <Snackbar
+        open={Boolean(feedback)}
+        autoHideDuration={6000}
+        onClose={() => setFeedback(null)}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setFeedback(null)}
+          severity={feedback?.type ?? "info"}
+          sx={{ width: "100%" }}
+        >
+          {feedback?.message}
+        </Alert>
+      </Snackbar>
+    </Section>
+  );
 }

@@ -1,67 +1,162 @@
-import { Box, Typography, Tab } from "@mui/material";
 import { useState } from "react";
-import SchoolIcon from '@mui/icons-material/School';
-import WorkIcon from '@mui/icons-material/Work';
+import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import {
+  educationTimeline,
+  experienceTimeline,
+  journeySection,
+  TimelineEntry,
+} from "../../../data/content";
+import { useT } from "../../../i18n";
+import { Section } from "../../../components/Section";
+import { SectionTitle } from "../../../components/SectionTitle";
 
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
-import { TimelineEducation } from "../../../components/TimelineEducation";
-import { TimelineExperience } from "../../../components/TimelineExperience";
-// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-
-export function QualificationSection() {
-  const [value, setValue] = useState('1');
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
+function TimelineList({ entries }: { entries: TimelineEntry[] }) {
+  const t = useT();
+  const reduced = useReducedMotion();
 
   return (
-    <Box sx={{
-      width: "100%",
-      mt: 20,
-
-      display: "flex",
-      justifyContent: "center",
-    }}>
-      {/* <BackgroundParticle height="765px" /> */}
-
-      <Box sx={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        gap: 2,
-      }}>
-        <Typography variant="h2" color="primary">
-          Qualification
-        </Typography>
-
-
+    <Box
+      component={motion.ol}
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: { transition: { staggerChildren: reduced ? 0 : 0.12 } },
+      }}
+      sx={{
+        listStyle: "none",
+        m: 0,
+        p: 0,
+        pl: { xs: 3, sm: 4 },
+        position: "relative",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          left: { xs: 6, sm: 8 },
+          top: 6,
+          bottom: 6,
+          width: 2,
+          borderRadius: 2,
+          background:
+            "linear-gradient(180deg, rgba(0,179,126,0.85) 0%, rgba(0,179,126,0.12) 100%)",
+        },
+      }}
+    >
+      {entries.map((entry, index) => (
         <Box
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          sx={{ width: '100%', typography: 'body1' }}
+          key={index}
+          component={motion.li}
+          variants={{
+            hidden: { opacity: 0, x: -18 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+            },
+          }}
+          sx={{ position: "relative", pb: index === entries.length - 1 ? 0 : 4.5 }}
         >
-          <TabContext value={value}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tab icon={<SchoolIcon color="secondary" />} iconPosition="start" label="Education" value="1" />
-              <Tab icon={<WorkIcon color="secondary" />} iconPosition="start" label="Experience" value="2" />
-            </TabList>
+          <Box
+            aria-hidden
+            sx={{
+              position: "absolute",
+              left: { xs: -22, sm: -28 },
+              top: 6,
+              width: 14,
+              height: 14,
+              borderRadius: "50%",
+              backgroundColor: "primary.main",
+              boxShadow: "0 0 0 4px rgba(0,179,126,0.16)",
+            }}
+          />
 
-            <TabPanel value="1" sx={{ width: "auto" }}>
-              <TimelineEducation />
-            </TabPanel>
-            <TabPanel value="2" sx={{ width: "auto" }}>
-              <TimelineExperience />
-            </TabPanel>
-          </TabContext>
+          <Typography variant="h4" color="primary">
+            {t(entry.primary)}
+          </Typography>
+          <Typography variant="h6" color="text.primary" sx={{ mt: 0.3 }}>
+            {t(entry.secondary)}
+          </Typography>
+
+          <Box display="flex" alignItems="center" gap={1} mt={0.8}>
+            <CalendarTodayIcon sx={{ fontSize: 15, color: "text.secondary" }} />
+            <Typography variant="caption" color="text.secondary">
+              {t(entry.date)}
+            </Typography>
+          </Box>
+
+          {entry.bullets && (
+            <Box component="ul" sx={{ mt: 1.2, mb: 0, pl: 2.2 }}>
+              {t(entry.bullets).map((bullet, bulletIndex) => (
+                <Typography
+                  component="li"
+                  key={bulletIndex}
+                  variant="body2"
+                  sx={{ color: "text.secondary", lineHeight: 1.75, mb: 0.4 }}
+                >
+                  {bullet}
+                </Typography>
+              ))}
+            </Box>
+          )}
         </Box>
-
-      </Box>
+      ))}
     </Box>
-  )
+  );
+}
+
+export function QualificationSection() {
+  const t = useT();
+  const [tab, setTab] = useState(0);
+
+  return (
+    <Section id="journey">
+      <SectionTitle
+        title={t(journeySection.title)}
+        kicker={t(journeySection.kicker)}
+      />
+
+      <Box display="flex" justifyContent="center" mb={{ xs: 4, md: 6 }}>
+        <Tabs
+          value={tab}
+          onChange={(_, value) => setTab(value)}
+          textColor="primary"
+          indicatorColor="primary"
+        >
+          <Tab
+            icon={<WorkIcon fontSize="small" />}
+            iconPosition="start"
+            label={t(journeySection.tabExperience)}
+            sx={{ minHeight: 48 }}
+          />
+          <Tab
+            icon={<SchoolIcon fontSize="small" />}
+            iconPosition="start"
+            label={t(journeySection.tabEducation)}
+            sx={{ minHeight: 48 }}
+          />
+        </Tabs>
+      </Box>
+
+      <Box sx={{ maxWidth: 780, mx: "auto" }}>
+        <AnimatePresence mode="wait">
+          <Box
+            key={tab}
+            component={motion.div}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            <TimelineList
+              entries={tab === 0 ? experienceTimeline : educationTimeline}
+            />
+          </Box>
+        </AnimatePresence>
+      </Box>
+    </Section>
+  );
 }

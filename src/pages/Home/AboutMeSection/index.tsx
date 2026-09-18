@@ -1,79 +1,82 @@
-import { Box, styled, Typography, useTheme } from "@mui/material";
-import DvrIcon from '@mui/icons-material/Dvr';
-import WorkIcon from '@mui/icons-material/Work';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import { AboutCard } from "../../../components/AboutCard";
-import IconNode from "../../../assets/skills/node.svg"
-import { tokens } from "../../../styles/theme";
-// import { BackgroundSky } from "../../../lib/BackgroundSky";
-// import { BackgroundParticle } from "../../../lib/BackgroundParticle";
-
-const NodeIconBackground = styled("img")(({ theme }) => {
-  return {
-    position: "absolute",
-    height: "50%",
-    width: "50%",
-    zIndex: -1
-  }
-})
+import { Box, Card, CardContent, Grid, Typography } from "@mui/material";
+import { motion, useReducedMotion } from "framer-motion";
+import { about } from "../../../data/content";
+import { useT } from "../../../i18n";
+import { Section } from "../../../components/Section";
+import { SectionTitle } from "../../../components/SectionTitle";
+import {
+  Reveal,
+  RevealGroup,
+  revealItemVariants,
+} from "../../../components/motion/Reveal";
+import { CountUp } from "../../../components/motion/CountUp";
 
 export function AboutMeSection() {
-  const theme = useTheme()
-  const colors = tokens(theme.palette.mode)
+  const t = useT();
+  const reduced = useReducedMotion();
+  const paragraphs = t(about.paragraphs);
 
   return (
-    <Box sx={{
-      width: "100%",
+    <Section id="about">
+      <SectionTitle title={t(about.title)} kicker={t(about.kicker)} />
 
-      display: "flex",
-      justifyContent: "center",
-    }}>
-      {/* <BackgroundSky /> */}
-      {/* <BackgroundParticle height="695px" /> */}
+      <Grid container spacing={{ xs: 3, md: 5 }} alignItems="flex-start">
+        <Grid item xs={12} md={5}>
+          <RevealGroup>
+            <Box display="flex" flexDirection="column" gap={2}>
+              {about.stats.map((stat) => (
+                <Card
+                  key={stat.label.en}
+                  component={motion.div}
+                  variants={revealItemVariants}
+                  whileHover={reduced ? undefined : { y: -4 }}
+                  sx={{
+                    backgroundColor: "background.paper",
+                    transition: "border-color .25s ease",
+                    "&:hover": { borderColor: "primary.main" },
+                  }}
+                >
+                  <CardContent
+                    sx={{
+                      display: "flex",
+                      alignItems: "baseline",
+                      gap: 2,
+                      py: 2.5,
+                    }}
+                  >
+                    <Typography
+                      variant="h2"
+                      color="primary"
+                      fontWeight={800}
+                      sx={{ minWidth: 72, fontSize: { xs: 32, md: 40 } }}
+                    >
+                      <CountUp to={stat.value} suffix={stat.suffix} />
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary">
+                      {t(stat.label)}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              ))}
+            </Box>
+          </RevealGroup>
+        </Grid>
 
-      <NodeIconBackground src={IconNode} alt="Image Background Node" />
-
-      <Box sx={{
-        width: "1120px",
-        display: "flex",
-        marginTop: "90px",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        flexDirection: "column",
-        gap: 4,
-      }}>
-        <Typography variant="h2" color="primary">
-          About Me
-        </Typography>
-
-        <Box display="flex" gap={4}>
-          <AboutCard
-            icon={<WorkIcon color="secondary" />}
-            title="Experience"
-            subtitle="3+ Years Working"
-          />
-          <AboutCard
-            icon={<DvrIcon color="secondary" />}
-            title="Projects"
-            subtitle="70+ Completed"
-          />
-          <AboutCard
-            icon={<WorkspacePremiumIcon color="secondary" />}
-            title="Certificate"
-            subtitle="40+ Completed"
-          />
-        </Box>
-
-        <Typography
-          fontWeight={400}
-          variant="h6"
-          color={colors.grey[300]}
-          maxWidth="500px"
-        >
-          Profissional de desenvolvimento determinado e ambicioso, constantemente em busca de novos desafios e oportunidades para aprimorar minhas habilidades. Ingressei na área de programação em 2018 durante o curso técnico no SENAI, onde tive meu primeiro contato com linguagens como PHP, Javascript e SQL. O domínio dessas linguagens despertou meu interesse no desenvolvimento de aplicações, impulsionando-me a explorar projetos Full-Stack.
-          Atualmente, tenho experiência e atuação em projetos envolvendo serviços SAP, destacando meu conhecimento em tecnologias como SAP Fiori Freestyle UI5, SAP Fiori Elements, SAP ABAP, SAP BTP, SAP CDS Views, SAP BOPF, SAP Hana, SAP Gateway e SAP Workflow. Minha trajetória profissional reflete meu comprometimento em alcançar a excelência na programação, e meu objetivo contínuo é aprimorar-me constantemente, contribuindo para soluções eficientes e inovadoras.
-        </Typography>
-      </Box>
-    </Box>
-  )
+        <Grid item xs={12} md={7}>
+          <Box display="flex" flexDirection="column" gap={2.5}>
+            {paragraphs.map((paragraph, index) => (
+              <Reveal key={index} delay={index * 0.08} direction="left">
+                <Typography
+                  variant="h6"
+                  sx={{ color: "text.secondary", lineHeight: 1.85 }}
+                >
+                  {paragraph}
+                </Typography>
+              </Reveal>
+            ))}
+          </Box>
+        </Grid>
+      </Grid>
+    </Section>
+  );
 }
