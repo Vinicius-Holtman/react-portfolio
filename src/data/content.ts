@@ -34,7 +34,7 @@ export const hero = {
     pt: "Mais de cinco anos construindo sobre a plataforma SAP. Atuação de ponta a ponta em implementações S/4HANA — do back-end em ABAP e ABAP RAP às aplicações Fiori e às integrações no SAP BTP com o Integration Suite.",
     en: "Over five years building on the SAP platform. End-to-end work on S/4HANA implementations — from ABAP and ABAP RAP back-ends to Fiori apps and SAP BTP integrations with the Integration Suite.",
   },
-  ctaCv: { pt: "Baixar currículo", en: "Download résumé" },
+  ctaCv: { pt: "Baixar currículo", en: "Download CV" },
   ctaContact: { pt: "Falar comigo", en: "Get in touch" },
   scroll: { pt: "Role para ver", en: "Scroll down" },
   keywords: [
