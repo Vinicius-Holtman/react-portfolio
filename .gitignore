@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# arquivos entregues pelo Claude (nao fazem parte do projeto)
+Claude outputs/
