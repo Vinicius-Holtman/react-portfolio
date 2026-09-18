@@ -84,12 +84,12 @@ export const about = {
     pt: [
       "Entrei na programação em 2018, no curso técnico do SENAI, com PHP, JavaScript e SQL. O gosto por montar aplicação inteira me levou para o full-stack e, de lá, para o ecossistema SAP — onde estou desde 2020.",
       "Hoje trabalho de ponta a ponta em implementações de SAP S/4HANA: modelo de dados em CDS Views, back-end em ABAP e ABAP RAP, aplicações Fiori Elements e Freestyle, e integrações no SAP BTP com o Integration Suite (CPI). Sou certificado em ABAP Cloud (C_ABAPD_2601), SAP CAP (C_CPE_2601) e SAP Fiori Application Developer (C_FIORD_2404).",
-      "Passei por agronegócio, indústria de bens de consumo e Oil & Gas, sempre com desenvolvimento aderente aos princípios de Clean Core. O background full-stack em React, Node.js e TypeScript ajuda a conversar tanto com time técnico quanto com quem entende do negócio.",
+      "Passei por agronegócio, indústria de bens de consumo e Oil & Gas, sempre com desenvolvimento aderente aos princípios de Clean Core.",
     ],
     en: [
       "I started coding in 2018 during a technical course at SENAI, with PHP, JavaScript and SQL. Wanting to build whole applications pulled me into full-stack and, from there, into the SAP ecosystem — where I have been since 2020.",
       "Today I work end to end on SAP S/4HANA implementations: data modelling in CDS Views, back-ends in ABAP and ABAP RAP, Fiori Elements and Freestyle apps, and SAP BTP integrations with the Integration Suite (CPI). I'm certified in ABAP Cloud (C_ABAPD_2601), SAP CAP (C_CPE_2601) and as an SAP Fiori Application Developer (C_FIORD_2404).",
-      "I've worked across agribusiness, consumer goods manufacturing and Oil & Gas, always building in line with Clean Core principles. The full-stack background in React, Node.js and TypeScript helps me talk to engineers and business people alike.",
+      "I've worked across agribusiness, consumer goods manufacturing and Oil & Gas, always building in line with Clean Core principles.",
     ],
   },
 };
