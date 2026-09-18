@@ -298,6 +298,27 @@ export const sapProjects: SapProject[] = [
     tags: ["ABAP", "SAP RAP", "Fiori", "SAP BTP", "SAP CPI"],
   },
   {
+    id: "vale",
+    client: "Vale",
+    sector: { pt: "Mineração", en: "Mining" },
+    title: {
+      pt: "PTS Digital — Permissão de Trabalho Seguro",
+      en: "PTS Digital — Safe Work Permit",
+    },
+    description: {
+      pt: "Aplicativo e portal para a gestão das Permissões de Trabalho Seguro nas operações de mineração. O sistema conduz os questionários de segurança e a análise de riscos, valida os treinamentos e qualificações dos envolvidos e controla o ciclo da permissão, da emissão ao encerramento, com registro de assinaturas e evidências.",
+      en: "App and portal for managing Safe Work Permits across mining operations. The system runs the safety questionnaires and risk assessment, validates the training and qualifications of everyone involved, and controls the permit lifecycle from issue to closure, recording signatures and supporting evidence.",
+    },
+    tags: [
+      "SAP CAP",
+      "SAP BTP",
+      "Build Work Zone",
+      "SAP CPI",
+      "SAP MDK",
+      "SAPUI5",
+    ],
+  },
+  {
     id: "larco",
     client: "Larco",
     sector: { pt: "Oil & Gas", en: "Oil & Gas" },
